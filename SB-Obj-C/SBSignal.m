@@ -1,11 +1,11 @@
-#import "SJBSignal.h"
+#import "SBSignal.h"
 
-#import "SJBSource.h"
-#import "SJBSubscription.h"
+#import "SBSource.h"
+#import "SBSubscription.h"
 
-@implementation SJBSignal {
+@implementation SBSignal {
     NSMutableArray<void (^)()> *_subscribers;
-    SJBSubscription *_internalSubscription;
+    SBSubscription *_internalSubscription;
 }
 
 - (id)init {
@@ -15,10 +15,10 @@
     return self;
 }
 
-- (id)initWithSource:(SJBSource *)source {
+- (id)initWithSource:(SBSource *)source {
     self = [self init];
     if (!self) return nil;
-    __weak SJBSignal *weakSelf = self;
+    __weak SBSignal *weakSelf = self;
     _internalSubscription = [source subscribeNext:^(id value) {
         [weakSelf notify];
     }];
@@ -31,24 +31,24 @@
     }
 }
 
-- (SJBSubscription *)subscribeNext:(void (^)())block {
+- (SBSubscription *)subscribeNext:(void (^)())block {
     block = [block copy];
     [_subscribers addObject:block];
-    return [[SJBSubscription alloc] initWithOriginator:self terminationBlock:^{
+    return [[SBSubscription alloc] initWithOriginator:self terminationBlock:^{
         [_subscribers removeObject:block];
     }];
 }
 
-+ (SJBSignal *)coalesceSignals:(NSArray<SJBSignal *> *)signals {
-    SJBSignal *resultingSignal = [[[self class] alloc] init];
++ (SBSignal *)coalesceSignals:(NSArray<SBSignal *> *)signals {
+    SBSignal *resultingSignal = [[[self class] alloc] init];
     NSMutableArray *subscriptions = [[NSMutableArray alloc] init];
-    for (SJBSignal *signal in signals) {
-        SJBSubscription *subscription = [signal subscribeNext:^{
+    for (SBSignal *signal in signals) {
+        SBSubscription *subscription = [signal subscribeNext:^{
             [resultingSignal notify];
         }];
         [subscriptions addObject:subscription];
     }
-    resultingSignal->_internalSubscription = [SJBSubscription coalesceSubscriptions:subscriptions];
+    resultingSignal->_internalSubscription = [SBSubscription coalesceSubscriptions:subscriptions];
     return resultingSignal;
 }
 

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA11D4241CC8AD8900A19EEB /* SJBSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* SJBSource.h */; };
-		AA11D4261CC8AD8900A19EEB /* SJBSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* SJBSource.m */; };
-		AA11D42E1CC8AEE600A19EEB /* SJBSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* SJBSubscription.m */; };
-		AA37478E1CC8BC0B005FB31E /* SJBCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* SJBCancellable.m */; };
-		AA3747911CC8BE02005FB31E /* SJBSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* SJBSignal.m */; };
+		AA11D4241CC8AD8900A19EEB /* SBSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* SBSource.h */; };
+		AA11D4261CC8AD8900A19EEB /* SBSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* SBSource.m */; };
+		AA11D42E1CC8AEE600A19EEB /* SBSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* SBSubscription.m */; };
+		AA37478E1CC8BC0B005FB31E /* SBCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* SBCancellable.m */; };
+		AA3747911CC8BE02005FB31E /* SBSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* SBSignal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,22 +21,22 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				AA11D4241CC8AD8900A19EEB /* SJBSource.h in CopyFiles */,
+				AA11D4241CC8AD8900A19EEB /* SBSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA11D4201CC8AD8900A19EEB /* libSJB-Obj-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSJB-Obj-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA11D4231CC8AD8900A19EEB /* SJBSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJBSource.h; sourceTree = "<group>"; };
-		AA11D4251CC8AD8900A19EEB /* SJBSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJBSource.m; sourceTree = "<group>"; };
-		AA11D42C1CC8AEE600A19EEB /* SJBSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBSubscription.h; sourceTree = "<group>"; };
-		AA11D42D1CC8AEE600A19EEB /* SJBSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBSubscription.m; sourceTree = "<group>"; };
-		AA37478C1CC8BC0B005FB31E /* SJBCancellable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBCancellable.h; sourceTree = "<group>"; };
-		AA37478D1CC8BC0B005FB31E /* SJBCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBCancellable.m; sourceTree = "<group>"; };
-		AA37478F1CC8BE02005FB31E /* SJBSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBSignal.h; sourceTree = "<group>"; };
-		AA3747901CC8BE02005FB31E /* SJBSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBSignal.m; sourceTree = "<group>"; };
+		AA11D4201CC8AD8900A19EEB /* libSB-Obj-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSB-Obj-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA11D4231CC8AD8900A19EEB /* SBSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBSource.h; sourceTree = "<group>"; };
+		AA11D4251CC8AD8900A19EEB /* SBSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBSource.m; sourceTree = "<group>"; };
+		AA11D42C1CC8AEE600A19EEB /* SBSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSubscription.h; sourceTree = "<group>"; };
+		AA11D42D1CC8AEE600A19EEB /* SBSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSubscription.m; sourceTree = "<group>"; };
+		AA37478C1CC8BC0B005FB31E /* SBCancellable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCancellable.h; sourceTree = "<group>"; };
+		AA37478D1CC8BC0B005FB31E /* SBCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCancellable.m; sourceTree = "<group>"; };
+		AA37478F1CC8BE02005FB31E /* SBSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSignal.h; sourceTree = "<group>"; };
+		AA3747901CC8BE02005FB31E /* SBSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSignal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		AA11D4171CC8AD8900A19EEB = {
 			isa = PBXGroup;
 			children = (
-				AA11D4221CC8AD8900A19EEB /* SJB-Obj-C */,
+				AA11D4221CC8AD8900A19EEB /* SB-Obj-C */,
 				AA11D4211CC8AD8900A19EEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,32 +61,32 @@
 		AA11D4211CC8AD8900A19EEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA11D4201CC8AD8900A19EEB /* libSJB-Obj-C.a */,
+				AA11D4201CC8AD8900A19EEB /* libSB-Obj-C.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA11D4221CC8AD8900A19EEB /* SJB-Obj-C */ = {
+		AA11D4221CC8AD8900A19EEB /* SB-Obj-C */ = {
 			isa = PBXGroup;
 			children = (
-				AA11D4231CC8AD8900A19EEB /* SJBSource.h */,
-				AA11D4251CC8AD8900A19EEB /* SJBSource.m */,
-				AA37478F1CC8BE02005FB31E /* SJBSignal.h */,
-				AA3747901CC8BE02005FB31E /* SJBSignal.m */,
-				AA11D42C1CC8AEE600A19EEB /* SJBSubscription.h */,
-				AA11D42D1CC8AEE600A19EEB /* SJBSubscription.m */,
-				AA37478C1CC8BC0B005FB31E /* SJBCancellable.h */,
-				AA37478D1CC8BC0B005FB31E /* SJBCancellable.m */,
+				AA11D4231CC8AD8900A19EEB /* SBSource.h */,
+				AA11D4251CC8AD8900A19EEB /* SBSource.m */,
+				AA37478F1CC8BE02005FB31E /* SBSignal.h */,
+				AA3747901CC8BE02005FB31E /* SBSignal.m */,
+				AA11D42C1CC8AEE600A19EEB /* SBSubscription.h */,
+				AA11D42D1CC8AEE600A19EEB /* SBSubscription.m */,
+				AA37478C1CC8BC0B005FB31E /* SBCancellable.h */,
+				AA37478D1CC8BC0B005FB31E /* SBCancellable.m */,
 			);
-			path = "SJB-Obj-C";
+			path = "SB-Obj-C";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA11D41F1CC8AD8900A19EEB /* SJB-Obj-C */ = {
+		AA11D41F1CC8AD8900A19EEB /* SB-Obj-C */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SJB-Obj-C" */;
+			buildConfigurationList = AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SB-Obj-C" */;
 			buildPhases = (
 				AA11D41C1CC8AD8900A19EEB /* Sources */,
 				AA11D41D1CC8AD8900A19EEB /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = "SJB-Obj-C";
-			productName = "SJB-Obj-C";
-			productReference = AA11D4201CC8AD8900A19EEB /* libSJB-Obj-C.a */;
+			name = "SB-Obj-C";
+			productName = "SB-Obj-C";
+			productReference = AA11D4201CC8AD8900A19EEB /* libSB-Obj-C.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SJB-Obj-C" */;
+			buildConfigurationList = AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SB-Obj-C" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA11D41F1CC8AD8900A19EEB /* SJB-Obj-C */,
+				AA11D41F1CC8AD8900A19EEB /* SB-Obj-C */,
 			);
 		};
 /* End PBXProject section */
@@ -137,10 +137,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA37478E1CC8BC0B005FB31E /* SJBCancellable.m in Sources */,
-				AA11D42E1CC8AEE600A19EEB /* SJBSubscription.m in Sources */,
-				AA11D4261CC8AD8900A19EEB /* SJBSource.m in Sources */,
-				AA3747911CC8BE02005FB31E /* SJBSignal.m in Sources */,
+				AA37478E1CC8BC0B005FB31E /* SBCancellable.m in Sources */,
+				AA11D42E1CC8AEE600A19EEB /* SBSubscription.m in Sources */,
+				AA11D4261CC8AD8900A19EEB /* SBSource.m in Sources */,
+				AA3747911CC8BE02005FB31E /* SBSignal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +248,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SJB-Obj-C" */ = {
+		AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SB-Obj-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA11D4271CC8AD8900A19EEB /* Debug */,
@@ -257,7 +257,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SJB-Obj-C" */ = {
+		AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SB-Obj-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA11D42A1CC8AD8900A19EEB /* Debug */,

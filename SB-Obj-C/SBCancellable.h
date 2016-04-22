@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SJBCancellable : NSObject
+@interface SBCancellable : NSObject
 
 - (instancetype)initWithCancellationBlock:(void (^)())block NS_DESIGNATED_INITIALIZER;
 
@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)cancel;
 
-+ (SJBCancellable *)coalesceCancellables:(NSArray<SJBCancellable *> *)cancellables;
++ (SBCancellable *)coalesceCancellables:(NSArray<SBCancellable *> *)cancellables;
 
 @end
 

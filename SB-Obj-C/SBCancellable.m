@@ -1,6 +1,6 @@
-#import "SJBCancellable.h"
+#import "SBCancellable.h"
 
-@implementation SJBCancellable {
+@implementation SBCancellable {
     void (^_cancellationBlock)();
 }
 
@@ -19,9 +19,9 @@
     }
 }
 
-+ (SJBCancellable *)coalesceCancellables:(NSArray<SJBCancellable *> *)cancellables {
++ (SBCancellable *)coalesceCancellables:(NSArray<SBCancellable *> *)cancellables {
     return [[[self class] alloc] initWithCancellationBlock:^{
-        for (SJBCancellable *cancellable in cancellables) {
+        for (SBCancellable *cancellable in cancellables) {
             [cancellable cancel];
         }
     }];

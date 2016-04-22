@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SJBSubscription : NSObject
+@interface SBSubscription : NSObject
 
 - (instancetype)initWithOriginator:(nullable id)originator
                   terminationBlock:(void (^)())terminationBlock NS_DESIGNATED_INITIALIZER;
@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)cancel;
 
-+ (SJBSubscription *)coalesceSubscriptions:(NSArray<SJBSubscription *> *)subscriptions;
++ (SBSubscription *)coalesceSubscriptions:(NSArray<SBSubscription *> *)subscriptions;
 
 @end
 

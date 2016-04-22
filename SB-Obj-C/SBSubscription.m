@@ -1,6 +1,6 @@
-#import "SJBSubscription.h"
+#import "SBSubscription.h"
 
-@implementation SJBSubscription {
+@implementation SBSubscription {
     id _originator;
     void (^_terminationBlock)();
 }
@@ -27,9 +27,9 @@
     }
 }
 
-+ (SJBSubscription *)coalesceSubscriptions:(NSArray<SJBSubscription *> *)subscriptions {
++ (SBSubscription *)coalesceSubscriptions:(NSArray<SBSubscription *> *)subscriptions {
     return [[[self class] alloc] initWithOriginator:nil terminationBlock:^{
-        for (SJBSubscription *subscription in subscriptions) {
+        for (SBSubscription *subscription in subscriptions) {
             [subscription cancel];
         }
     }];
