@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA11D4241CC8AD8900A19EEB /* SJBSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* SJBSource.h */; };
+		AA11D4261CC8AD8900A19EEB /* SJBSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* SJBSource.m */; };
+		AA11D42E1CC8AEE600A19EEB /* SJBSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* SJBSubscription.m */; };
+		AA37478E1CC8BC0B005FB31E /* SJBCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* SJBCancellable.m */; };
+		AA3747911CC8BE02005FB31E /* SJBSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* SJBSignal.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA11D41E1CC8AD8900A19EEB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AA11D4241CC8AD8900A19EEB /* SJBSource.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AA11D4201CC8AD8900A19EEB /* libSJB-Obj-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSJB-Obj-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA11D4231CC8AD8900A19EEB /* SJBSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJBSource.h; sourceTree = "<group>"; };
+		AA11D4251CC8AD8900A19EEB /* SJBSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJBSource.m; sourceTree = "<group>"; };
+		AA11D42C1CC8AEE600A19EEB /* SJBSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBSubscription.h; sourceTree = "<group>"; };
+		AA11D42D1CC8AEE600A19EEB /* SJBSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBSubscription.m; sourceTree = "<group>"; };
+		AA37478C1CC8BC0B005FB31E /* SJBCancellable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBCancellable.h; sourceTree = "<group>"; };
+		AA37478D1CC8BC0B005FB31E /* SJBCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBCancellable.m; sourceTree = "<group>"; };
+		AA37478F1CC8BE02005FB31E /* SJBSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBSignal.h; sourceTree = "<group>"; };
+		AA3747901CC8BE02005FB31E /* SJBSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBSignal.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA11D41D1CC8AD8900A19EEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA11D4171CC8AD8900A19EEB = {
+			isa = PBXGroup;
+			children = (
+				AA11D4221CC8AD8900A19EEB /* SJB-Obj-C */,
+				AA11D4211CC8AD8900A19EEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA11D4211CC8AD8900A19EEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA11D4201CC8AD8900A19EEB /* libSJB-Obj-C.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA11D4221CC8AD8900A19EEB /* SJB-Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				AA11D4231CC8AD8900A19EEB /* SJBSource.h */,
+				AA11D4251CC8AD8900A19EEB /* SJBSource.m */,
+				AA37478F1CC8BE02005FB31E /* SJBSignal.h */,
+				AA3747901CC8BE02005FB31E /* SJBSignal.m */,
+				AA11D42C1CC8AEE600A19EEB /* SJBSubscription.h */,
+				AA11D42D1CC8AEE600A19EEB /* SJBSubscription.m */,
+				AA37478C1CC8BC0B005FB31E /* SJBCancellable.h */,
+				AA37478D1CC8BC0B005FB31E /* SJBCancellable.m */,
+			);
+			path = "SJB-Obj-C";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA11D41F1CC8AD8900A19EEB /* SJB-Obj-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SJB-Obj-C" */;
+			buildPhases = (
+				AA11D41C1CC8AD8900A19EEB /* Sources */,
+				AA11D41D1CC8AD8900A19EEB /* Frameworks */,
+				AA11D41E1CC8AD8900A19EEB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SJB-Obj-C";
+			productName = "SJB-Obj-C";
+			productReference = AA11D4201CC8AD8900A19EEB /* libSJB-Obj-C.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA11D4181CC8AD8900A19EEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Steve Brunwasser";
+				TargetAttributes = {
+					AA11D41F1CC8AD8900A19EEB = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SJB-Obj-C" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AA11D4171CC8AD8900A19EEB;
+			productRefGroup = AA11D4211CC8AD8900A19EEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA11D41F1CC8AD8900A19EEB /* SJB-Obj-C */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA11D41C1CC8AD8900A19EEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA37478E1CC8BC0B005FB31E /* SJBCancellable.m in Sources */,
+				AA11D42E1CC8AEE600A19EEB /* SJBSubscription.m in Sources */,
+				AA11D4261CC8AD8900A19EEB /* SJBSource.m in Sources */,
+				AA3747911CC8BE02005FB31E /* SJBSignal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA11D4271CC8AD8900A19EEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AA11D4281CC8AD8900A19EEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA11D42A1CC8AD8900A19EEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AA11D42B1CC8AD8900A19EEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SJB-Obj-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA11D4271CC8AD8900A19EEB /* Debug */,
+				AA11D4281CC8AD8900A19EEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SJB-Obj-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA11D42A1CC8AD8900A19EEB /* Debug */,
+				AA11D42B1CC8AD8900A19EEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA11D4181CC8AD8900A19EEB /* Project object */;
+}
