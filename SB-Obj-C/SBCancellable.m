@@ -13,9 +13,11 @@
 }
 
 - (void)cancel {
-    if (_cancellationBlock) {
-        _cancellationBlock();
-        _cancellationBlock = nil;
+    @synchronized (self) {
+        if (_cancellationBlock) {
+            _cancellationBlock();
+            _cancellationBlock = nil;
+        }
     }
 }
 

@@ -14,16 +14,20 @@
 }
 
 - (void)dealloc {
-    if (_cancellationBlock) {
-        _cancellationBlock();
+    @synchronized (self) {
+        if (_cancellationBlock) {
+            _cancellationBlock();
+        }
     }
 }
 
 - (void)cancel {
-    if (_cancellationBlock) {
-        _cancellationBlock();
-        _cancellationBlock = nil;
-        _originator = nil;
+    @synchronized (self) {
+        if (_cancellationBlock) {
+            _cancellationBlock();
+            _cancellationBlock = nil;
+            _originator = nil;
+        }
     }
 }
 
