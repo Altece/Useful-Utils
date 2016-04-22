@@ -2,27 +2,27 @@
 
 @implementation SBSubscription {
     id _originator;
-    void (^_terminationBlock)();
+    void (^_cancellationBlock)();
 }
 
-- (instancetype)initWithOriginator:(id)originator terminationBlock:(void (^)())terminationBlock {
+- (instancetype)initWithOriginator:(id)originator cancellationBlock:(void (^)())cancellationBlock {
     self = [super init];
     if (!self) return nil;
     _originator = originator;
-    _terminationBlock = [terminationBlock copy];
+    _cancellationBlock = [cancellationBlock copy];
     return self;
 }
 
 - (void)dealloc {
-    if (_terminationBlock) {
-        _terminationBlock();
+    if (_cancellationBlock) {
+        _cancellationBlock();
     }
 }
 
 - (void)cancel {
-    if (_terminationBlock) {
-        _terminationBlock();
-        _terminationBlock = nil;
+    if (_cancellationBlock) {
+        _cancellationBlock();
+        _cancellationBlock = nil;
         _originator = nil;
     }
 }
