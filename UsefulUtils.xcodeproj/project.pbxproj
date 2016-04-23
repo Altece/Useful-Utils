@@ -11,20 +11,20 @@
 		AA032BA91CCB2A54009AA88B /* UsefulUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA032B9F1CCB2A54009AA88B /* UsefulUtils.framework */; };
 		AA032BAE1CCB2A54009AA88B /* UsefulUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BAD1CCB2A54009AA88B /* UsefulUtilsTests.m */; };
 		AA032BB61CCB2A9D009AA88B /* UUSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* UUSource.m */; };
-		AA032BB71CCB2AA4009AA88B /* UUSource.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* UUSource.h */; };
-		AA032BB81CCB2AA4009AA88B /* UUSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = AA37478F1CC8BE02005FB31E /* UUSignal.h */; };
+		AA032BB71CCB2AA4009AA88B /* UUSource.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* UUSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA032BB81CCB2AA4009AA88B /* UUSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = AA37478F1CC8BE02005FB31E /* UUSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BB91CCB2AA4009AA88B /* UUSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* UUSignal.m */; };
-		AA032BBA1CCB2AA4009AA88B /* UUSubscription.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */; };
+		AA032BBA1CCB2AA4009AA88B /* UUSubscription.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BBB1CCB2AA4009AA88B /* UUSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */; };
-		AA032BBC1CCB2AA4009AA88B /* UUCancellable.h in Headers */ = {isa = PBXBuildFile; fileRef = AA37478C1CC8BC0B005FB31E /* UUCancellable.h */; };
+		AA032BBC1CCB2AA4009AA88B /* UUCancellable.h in Headers */ = {isa = PBXBuildFile; fileRef = AA37478C1CC8BC0B005FB31E /* UUCancellable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BBD1CCB2AA4009AA88B /* UUCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* UUCancellable.m */; };
-		AA032BBE1CCB2AA4009AA88B /* UUMaybe.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032B941CCB16D9009AA88B /* UUMaybe.h */; };
+		AA032BBE1CCB2AA4009AA88B /* UUMaybe.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032B941CCB16D9009AA88B /* UUMaybe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BBF1CCB2AA4009AA88B /* UUMaybe.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032B951CCB16D9009AA88B /* UUMaybe.m */; };
-		AA032BC01CCB2AA4009AA88B /* UUDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032B971CCB191C009AA88B /* UUDispatch.h */; };
+		AA032BC01CCB2AA4009AA88B /* UUDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032B971CCB191C009AA88B /* UUDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BC11CCB2AA4009AA88B /* UUDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032B981CCB191C009AA88B /* UUDispatch.m */; };
-		AA032BC41CCB2C62009AA88B /* UUTask.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BC21CCB2C62009AA88B /* UUTask.h */; };
+		AA032BC41CCB2C62009AA88B /* UUTask.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BC21CCB2C62009AA88B /* UUTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BC51CCB2C62009AA88B /* UUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC31CCB2C62009AA88B /* UUTask.m */; };
-		AA032BC81CCB2DAE009AA88B /* UUMap.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BC61CCB2DAE009AA88B /* UUMap.h */; };
+		AA032BC81CCB2DAE009AA88B /* UUMap.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BC61CCB2DAE009AA88B /* UUMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BC91CCB2DAE009AA88B /* UUMap.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC71CCB2DAE009AA88B /* UUMap.m */; };
 /* End PBXBuildFile section */
 
@@ -94,9 +94,9 @@
 		AA11D4171CC8AD8900A19EEB = {
 			isa = PBXGroup;
 			children = (
+				AA11D4211CC8AD8900A19EEB /* Products */,
 				AA11D4221CC8AD8900A19EEB /* UsefulUtils */,
 				AA032BAC1CCB2A54009AA88B /* UsefulUtilsTests */,
-				AA11D4211CC8AD8900A19EEB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,24 +112,24 @@
 		AA11D4221CC8AD8900A19EEB /* UsefulUtils */ = {
 			isa = PBXGroup;
 			children = (
-				AA032BA11CCB2A54009AA88B /* UsefulUtils.h */,
 				AA032BA31CCB2A54009AA88B /* Info.plist */,
-				AA11D4231CC8AD8900A19EEB /* UUSource.h */,
-				AA11D4251CC8AD8900A19EEB /* UUSource.m */,
-				AA37478F1CC8BE02005FB31E /* UUSignal.h */,
-				AA3747901CC8BE02005FB31E /* UUSignal.m */,
-				AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */,
-				AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */,
+				AA032BA11CCB2A54009AA88B /* UsefulUtils.h */,
 				AA37478C1CC8BC0B005FB31E /* UUCancellable.h */,
 				AA37478D1CC8BC0B005FB31E /* UUCancellable.m */,
-				AA032B941CCB16D9009AA88B /* UUMaybe.h */,
-				AA032B951CCB16D9009AA88B /* UUMaybe.m */,
 				AA032B971CCB191C009AA88B /* UUDispatch.h */,
 				AA032B981CCB191C009AA88B /* UUDispatch.m */,
-				AA032BC21CCB2C62009AA88B /* UUTask.h */,
-				AA032BC31CCB2C62009AA88B /* UUTask.m */,
 				AA032BC61CCB2DAE009AA88B /* UUMap.h */,
 				AA032BC71CCB2DAE009AA88B /* UUMap.m */,
+				AA032B941CCB16D9009AA88B /* UUMaybe.h */,
+				AA032B951CCB16D9009AA88B /* UUMaybe.m */,
+				AA37478F1CC8BE02005FB31E /* UUSignal.h */,
+				AA3747901CC8BE02005FB31E /* UUSignal.m */,
+				AA11D4231CC8AD8900A19EEB /* UUSource.h */,
+				AA11D4251CC8AD8900A19EEB /* UUSource.m */,
+				AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */,
+				AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */,
+				AA032BC21CCB2C62009AA88B /* UUTask.h */,
+				AA032BC31CCB2C62009AA88B /* UUTask.m */,
 			);
 			path = UsefulUtils;
 			sourceTree = "<group>";
@@ -437,6 +437,7 @@
 				AA032BB21CCB2A54009AA88B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA032BB31CCB2A54009AA88B /* Build configuration list for PBXNativeTarget "UsefulUtilsTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +446,7 @@
 				AA032BB51CCB2A54009AA88B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "UsefulUtils" */ = {
 			isa = XCConfigurationList;
