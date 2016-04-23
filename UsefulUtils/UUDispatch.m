@@ -181,7 +181,7 @@ static UUCancellable *cancellableDispatch(id<UUDispatcher> dispatcher,
 }
 
 + (dispatch_queue_t)serialQueueWithLabel:(NSString *)label {
-    return dispatch_queue_create([name UTF8String] ?: "", DISPATCH_QUEUE_SERIAL);
+    return dispatch_queue_create([label UTF8String] ?: "", DISPATCH_QUEUE_SERIAL);
 }
 
 + (nullable dispatch_queue_t)globalQueueWithPriority:(dispatch_queue_priority_t)priority {
