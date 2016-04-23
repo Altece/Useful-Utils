@@ -4,6 +4,29 @@
 
 #import "UUCancellable.h"
 
+///
+/// A convenience function for creating a cancellable dispatch
+/// from a normal dispatcher.
+///
+static UUCancellable *cancellableDispatch(id<UUDispatch> dispatcher,
+                                          dispatch_block_t block) {
+    NSLock *lock = [[NSLock alloc] init];
+    __block BOOL shouldContinue = YES;
+    [dispatcher dispatchBlock:^{
+        [lock lock];
+        BOOL willContinue = shouldContinue;
+        [lock unlock];
+        if (willContinue) {
+            block();
+        }
+    }];
+    return [[UUCancellable alloc] initWithCancellationBlock:^{
+        [lock lock];
+        shouldContinue = NO;
+        [lock unlock];
+    }];
+}
+
 #pragma mark - Dispatch Immediately
 
 @implementation UUDispatchImmediately
@@ -70,21 +93,7 @@
 }
 
 - (UUCancellable *)dispatchCancellableBlock:(dispatch_block_t)block {
-    NSLock *lock = [[NSLock alloc] init];
-    __block BOOL shouldContinue = YES;
-    [self dispatchBlock:^{
-        [lock lock];
-        BOOL willContinue = shouldContinue;
-        [lock unlock];
-        if (willContinue) {
-            block();
-        }
-    }];
-    return [[UUCancellable alloc] initWithCancellationBlock:^{
-        [lock lock];
-        shouldContinue = NO;
-        [lock unlock];
-    }];
+    return cancellableDispatch(self, block);
 }
 
 + (instancetype)mainQueueDispatcher {
@@ -122,6 +131,10 @@
 - (void)dispatchBlock:(dispatch_block_t)block {
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(_delay * NSEC_PER_SEC));
     dispatch_after(time, _queue, block);
+}
+
+- (UUCancellable *)dispatchCancellableBlock:(dispatch_block_t)block {
+    return cancellableDispatch(self, block);
 }
 
 + (instancetype)mainQueueDispatcher {
