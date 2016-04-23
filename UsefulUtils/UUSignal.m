@@ -1,10 +1,12 @@
 #import "UUSignal.h"
 
+#import "UUDispatch.h"
 #import "UUSource.h"
 #import "UUSubscription.h"
+#import "UUTask.h"
 
 @implementation UUSignal {
-    NSMutableArray<void (^)()> *_subscribers;
+    NSMutableArray<UUTask *> *_subscribers;
     UUSubscription *_internalSubscription;
 }
 
@@ -26,16 +28,20 @@
 }
 
 - (void)notify {
-    for (void (^block)() in _subscribers) {
-        block();
+    for (UUTask *subscriber in _subscribers) {
+        [subscriber performTask];
     }
 }
 
 - (UUSubscription *)subscribeNext:(void (^)())block {
-    block = [block copy];
-    [_subscribers addObject:block];
-    return [[UUSubscription alloc] initWithOriginator:self terminationBlock:^{
-        [_subscribers removeObject:block];
+    return [self subscribeNext:block on:[UUDispatchImmediately sharedDispatcher]];
+}
+
+- (UUSubscription *)subscribeNext:(void (^)())block on:(id<UUDispatch>)dispatcher {
+    UUTask *subscriber = [[UUTask alloc] initWithBlock:block on:dispatcher];
+    [_subscribers addObject:subscriber];
+    return [[UUSubscription alloc] initWithOriginator:self cancellationBlock:^{
+        [_subscribers removeObject:subscriber];
     }];
 }
 

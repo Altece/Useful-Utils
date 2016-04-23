@@ -1,8 +1,11 @@
 #import "UUSubscription.h"
 
+#import "UUDispatch.h"
+
 @implementation UUSubscription {
     id _originator;
     void (^_cancellationBlock)();
+    UUDispatchOnce *_dispatchOnce;
 }
 
 - (instancetype)initWithOriginator:(id)originator cancellationBlock:(void (^)())cancellationBlock {
@@ -10,29 +13,30 @@
     if (!self) return nil;
     _originator = originator;
     _cancellationBlock = [cancellationBlock copy];
+    _dispatchOnce = [[UUDispatchOnce alloc] init];
     return self;
 }
 
 - (void)dealloc {
-    @synchronized (self) {
+    [_dispatchOnce dispatchBlock:^{
         if (_cancellationBlock) {
             _cancellationBlock();
         }
-    }
+    }];
 }
 
 - (void)cancel {
-    @synchronized (self) {
+    [_dispatchOnce dispatchBlock:^{
         if (_cancellationBlock) {
             _cancellationBlock();
             _cancellationBlock = nil;
             _originator = nil;
         }
-    }
+    }];
 }
 
 + (UUSubscription *)coalesceSubscriptions:(NSArray<UUSubscription *> *)subscriptions {
-    return [[[self class] alloc] initWithOriginator:nil terminationBlock:^{
+    return [[[self class] alloc] initWithOriginator:nil cancellationBlock:^{
         for (UUSubscription *subscription in subscriptions) {
             [subscription cancel];
         }

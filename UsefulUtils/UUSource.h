@@ -4,11 +4,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class UUSignal;
 @class UUSubscription;
+@protocol UUDispatch;
+@protocol UUMap;
 
 ///
 /// An object which represents a given value as it changes over time.
 ///
-@interface UUSource<T> : NSObject
+@interface UUSource<T> : NSObject <UUMap>
 
 ///
 /// A signal to notify subscribers when this source has its value revoked.
@@ -59,6 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param block The block to be called on with the source's current and future values.
 /// @returns A subscription object which must be retained in order to have
 ///          the subscribed block continue to receive pushed values.
+/// @discussion This is a convenience method for -subscribe:on: which
+///             uses the shared instance of @c UUDispatchImmediately.
 ///
 - (UUSubscription *)subscribe:(void (^)(T value))block;
 
@@ -69,8 +73,32 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param block The block to be called on with the source's future values.
 /// @returns A subscription object which must be retained in order to have
 ///          the subscribed block continue to receive pushed values.
+/// @discussion This is a convenience method for -subscribeNext:on: which
+///             uses the shared instance of @c UUDispatchImmediately.
 ///
 - (UUSubscription *)subscribeNext:(void (^)(T value))block;
+
+///
+/// If the source has a current value, call on the given block with it immediately,
+/// using the given dispatcher, then have the block receive all future values
+/// pushed to the source.
+/// @param block The block to be called on with the source's current and future values.
+/// @param dispatcher The dispatcher used to call the subscribing block with.
+/// @returns A subscription object which must be retained in order to have
+///          the subscribed block continue to receive pushed values.
+///
+- (UUSubscription *)subscribe:(void (^)(T value))block on:(id<UUDispatch>)dispatcher;
+
+///
+/// Call on the given block using the given dispatcher whenever a value
+/// is pushed to the source, starting with the next value to be pushed,
+/// and continuing on until the returned subscription is cancelled.
+/// @param block The block to be called on with the source's future values.
+/// @param dispatcher The dispatcher used to call the subscribing block with.
+/// @returns A subscription object which must be retained in order to have
+///          the subscribed block continue to receive pushed values.
+///
+- (UUSubscription *)subscribeNext:(void (^)(T))block on:(id<UUDispatch>)dispatcher;
 
 #pragma mark Creating Derived Sources
 

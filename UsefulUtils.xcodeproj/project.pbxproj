@@ -7,28 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA11D4241CC8AD8900A19EEB /* UUSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* UUSource.h */; };
-		AA11D4261CC8AD8900A19EEB /* UUSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* UUSource.m */; };
-		AA11D42E1CC8AEE600A19EEB /* UUSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */; };
-		AA37478E1CC8BC0B005FB31E /* UUCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* UUCancellable.m */; };
-		AA3747911CC8BE02005FB31E /* UUSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* UUSignal.m */; };
+		AA032BA21CCB2A54009AA88B /* UsefulUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BA11CCB2A54009AA88B /* UsefulUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA032BA91CCB2A54009AA88B /* UsefulUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA032B9F1CCB2A54009AA88B /* UsefulUtils.framework */; };
+		AA032BAE1CCB2A54009AA88B /* UsefulUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BAD1CCB2A54009AA88B /* UsefulUtilsTests.m */; };
+		AA032BB61CCB2A9D009AA88B /* UUSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* UUSource.m */; };
+		AA032BB71CCB2AA4009AA88B /* UUSource.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* UUSource.h */; };
+		AA032BB81CCB2AA4009AA88B /* UUSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = AA37478F1CC8BE02005FB31E /* UUSignal.h */; };
+		AA032BB91CCB2AA4009AA88B /* UUSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* UUSignal.m */; };
+		AA032BBA1CCB2AA4009AA88B /* UUSubscription.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */; };
+		AA032BBB1CCB2AA4009AA88B /* UUSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */; };
+		AA032BBC1CCB2AA4009AA88B /* UUCancellable.h in Headers */ = {isa = PBXBuildFile; fileRef = AA37478C1CC8BC0B005FB31E /* UUCancellable.h */; };
+		AA032BBD1CCB2AA4009AA88B /* UUCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* UUCancellable.m */; };
+		AA032BBE1CCB2AA4009AA88B /* UUMaybe.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032B941CCB16D9009AA88B /* UUMaybe.h */; };
+		AA032BBF1CCB2AA4009AA88B /* UUMaybe.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032B951CCB16D9009AA88B /* UUMaybe.m */; };
+		AA032BC01CCB2AA4009AA88B /* UUDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032B971CCB191C009AA88B /* UUDispatch.h */; };
+		AA032BC11CCB2AA4009AA88B /* UUDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032B981CCB191C009AA88B /* UUDispatch.m */; };
+		AA032BC41CCB2C62009AA88B /* UUTask.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BC21CCB2C62009AA88B /* UUTask.h */; };
+		AA032BC51CCB2C62009AA88B /* UUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC31CCB2C62009AA88B /* UUTask.m */; };
+		AA032BC81CCB2DAE009AA88B /* UUMap.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BC61CCB2DAE009AA88B /* UUMap.h */; };
+		AA032BC91CCB2DAE009AA88B /* UUMap.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC71CCB2DAE009AA88B /* UUMap.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		AA11D41E1CC8AD8900A19EEB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				AA11D4241CC8AD8900A19EEB /* UUSource.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		AA032BAA1CCB2A54009AA88B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA11D4181CC8AD8900A19EEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA032B9E1CCB2A54009AA88B;
+			remoteInfo = UsefulUtils;
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUsefulUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA032B941CCB16D9009AA88B /* UUMaybe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMaybe.h; sourceTree = "<group>"; };
+		AA032B951CCB16D9009AA88B /* UUMaybe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMaybe.m; sourceTree = "<group>"; };
+		AA032B971CCB191C009AA88B /* UUDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUDispatch.h; sourceTree = "<group>"; };
+		AA032B981CCB191C009AA88B /* UUDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUDispatch.m; sourceTree = "<group>"; };
+		AA032B9F1CCB2A54009AA88B /* UsefulUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UsefulUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA032BA11CCB2A54009AA88B /* UsefulUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsefulUtils.h; sourceTree = "<group>"; };
+		AA032BA31CCB2A54009AA88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA032BA81CCB2A54009AA88B /* UsefulUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsefulUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA032BAD1CCB2A54009AA88B /* UsefulUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsefulUtilsTests.m; sourceTree = "<group>"; };
+		AA032BAF1CCB2A54009AA88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA032BC21CCB2C62009AA88B /* UUTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTask.h; sourceTree = "<group>"; };
+		AA032BC31CCB2C62009AA88B /* UUTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTask.m; sourceTree = "<group>"; };
+		AA032BC61CCB2DAE009AA88B /* UUMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUMap.h; sourceTree = "<group>"; };
+		AA032BC71CCB2DAE009AA88B /* UUMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUMap.m; sourceTree = "<group>"; };
 		AA11D4231CC8AD8900A19EEB /* UUSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSource.h; sourceTree = "<group>"; };
 		AA11D4251CC8AD8900A19EEB /* UUSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSource.m; sourceTree = "<group>"; };
 		AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUSubscription.h; sourceTree = "<group>"; };
@@ -40,20 +64,38 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AA11D41D1CC8AD8900A19EEB /* Frameworks */ = {
+		AA032B9B1CCB2A54009AA88B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA032BA51CCB2A54009AA88B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA032BA91CCB2A54009AA88B /* UsefulUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA032BAC1CCB2A54009AA88B /* UsefulUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA032BAD1CCB2A54009AA88B /* UsefulUtilsTests.m */,
+				AA032BAF1CCB2A54009AA88B /* Info.plist */,
+			);
+			path = UsefulUtilsTests;
+			sourceTree = "<group>";
+		};
 		AA11D4171CC8AD8900A19EEB = {
 			isa = PBXGroup;
 			children = (
 				AA11D4221CC8AD8900A19EEB /* UsefulUtils */,
+				AA032BAC1CCB2A54009AA88B /* UsefulUtilsTests */,
 				AA11D4211CC8AD8900A19EEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +103,8 @@
 		AA11D4211CC8AD8900A19EEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */,
+				AA032B9F1CCB2A54009AA88B /* UsefulUtils.framework */,
+				AA032BA81CCB2A54009AA88B /* UsefulUtilsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +112,8 @@
 		AA11D4221CC8AD8900A19EEB /* UsefulUtils */ = {
 			isa = PBXGroup;
 			children = (
+				AA032BA11CCB2A54009AA88B /* UsefulUtils.h */,
+				AA032BA31CCB2A54009AA88B /* Info.plist */,
 				AA11D4231CC8AD8900A19EEB /* UUSource.h */,
 				AA11D4251CC8AD8900A19EEB /* UUSource.m */,
 				AA37478F1CC8BE02005FB31E /* UUSignal.h */,
@@ -77,20 +122,48 @@
 				AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */,
 				AA37478C1CC8BC0B005FB31E /* UUCancellable.h */,
 				AA37478D1CC8BC0B005FB31E /* UUCancellable.m */,
+				AA032B941CCB16D9009AA88B /* UUMaybe.h */,
+				AA032B951CCB16D9009AA88B /* UUMaybe.m */,
+				AA032B971CCB191C009AA88B /* UUDispatch.h */,
+				AA032B981CCB191C009AA88B /* UUDispatch.m */,
+				AA032BC21CCB2C62009AA88B /* UUTask.h */,
+				AA032BC31CCB2C62009AA88B /* UUTask.m */,
+				AA032BC61CCB2DAE009AA88B /* UUMap.h */,
+				AA032BC71CCB2DAE009AA88B /* UUMap.m */,
 			);
 			path = UsefulUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AA032B9C1CCB2A54009AA88B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA032BC81CCB2DAE009AA88B /* UUMap.h in Headers */,
+				AA032BA21CCB2A54009AA88B /* UsefulUtils.h in Headers */,
+				AA032BBA1CCB2AA4009AA88B /* UUSubscription.h in Headers */,
+				AA032BB81CCB2AA4009AA88B /* UUSignal.h in Headers */,
+				AA032BC41CCB2C62009AA88B /* UUTask.h in Headers */,
+				AA032BBC1CCB2AA4009AA88B /* UUCancellable.h in Headers */,
+				AA032BC01CCB2AA4009AA88B /* UUDispatch.h in Headers */,
+				AA032BB71CCB2AA4009AA88B /* UUSource.h in Headers */,
+				AA032BBE1CCB2AA4009AA88B /* UUMaybe.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		AA11D41F1CC8AD8900A19EEB /* UsefulUtils */ = {
+		AA032B9E1CCB2A54009AA88B /* UsefulUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "UsefulUtils" */;
+			buildConfigurationList = AA032BB01CCB2A54009AA88B /* Build configuration list for PBXNativeTarget "UsefulUtils" */;
 			buildPhases = (
-				AA11D41C1CC8AD8900A19EEB /* Sources */,
-				AA11D41D1CC8AD8900A19EEB /* Frameworks */,
-				AA11D41E1CC8AD8900A19EEB /* CopyFiles */,
+				AA032B9A1CCB2A54009AA88B /* Sources */,
+				AA032B9B1CCB2A54009AA88B /* Frameworks */,
+				AA032B9C1CCB2A54009AA88B /* Headers */,
+				AA032B9D1CCB2A54009AA88B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -98,8 +171,26 @@
 			);
 			name = UsefulUtils;
 			productName = UsefulUtils;
-			productReference = AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = AA032B9F1CCB2A54009AA88B /* UsefulUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA032BA71CCB2A54009AA88B /* UsefulUtilsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA032BB31CCB2A54009AA88B /* Build configuration list for PBXNativeTarget "UsefulUtilsTests" */;
+			buildPhases = (
+				AA032BA41CCB2A54009AA88B /* Sources */,
+				AA032BA51CCB2A54009AA88B /* Frameworks */,
+				AA032BA61CCB2A54009AA88B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA032BAB1CCB2A54009AA88B /* PBXTargetDependency */,
+			);
+			name = UsefulUtilsTests;
+			productName = UsefulUtilsTests;
+			productReference = AA032BA81CCB2A54009AA88B /* UsefulUtilsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -110,8 +201,11 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Steve Brunwasser";
 				TargetAttributes = {
-					AA11D41F1CC8AD8900A19EEB = {
-						CreatedOnToolsVersion = 7.2.1;
+					AA032B9E1CCB2A54009AA88B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					AA032BA71CCB2A54009AA88B = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -127,26 +221,132 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA11D41F1CC8AD8900A19EEB /* UsefulUtils */,
+				AA032B9E1CCB2A54009AA88B /* UsefulUtils */,
+				AA032BA71CCB2A54009AA88B /* UsefulUtilsTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		AA032B9D1CCB2A54009AA88B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA032BA61CCB2A54009AA88B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		AA11D41C1CC8AD8900A19EEB /* Sources */ = {
+		AA032B9A1CCB2A54009AA88B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA37478E1CC8BC0B005FB31E /* UUCancellable.m in Sources */,
-				AA11D42E1CC8AEE600A19EEB /* UUSubscription.m in Sources */,
-				AA11D4261CC8AD8900A19EEB /* UUSource.m in Sources */,
-				AA3747911CC8BE02005FB31E /* UUSignal.m in Sources */,
+				AA032BB61CCB2A9D009AA88B /* UUSource.m in Sources */,
+				AA032BC11CCB2AA4009AA88B /* UUDispatch.m in Sources */,
+				AA032BC91CCB2DAE009AA88B /* UUMap.m in Sources */,
+				AA032BBB1CCB2AA4009AA88B /* UUSubscription.m in Sources */,
+				AA032BC51CCB2C62009AA88B /* UUTask.m in Sources */,
+				AA032BBD1CCB2AA4009AA88B /* UUCancellable.m in Sources */,
+				AA032BB91CCB2AA4009AA88B /* UUSignal.m in Sources */,
+				AA032BBF1CCB2AA4009AA88B /* UUMaybe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA032BA41CCB2A54009AA88B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA032BAE1CCB2A54009AA88B /* UsefulUtilsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AA032BAB1CCB2A54009AA88B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA032B9E1CCB2A54009AA88B /* UsefulUtils */;
+			targetProxy = AA032BAA1CCB2A54009AA88B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AA032BB11CCB2A54009AA88B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UsefulUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altece.UsefulUtils;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA032BB21CCB2A54009AA88B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UsefulUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altece.UsefulUtils;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA032BB41CCB2A54009AA88B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = UsefulUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altece.UsefulUtilsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA032BB51CCB2A54009AA88B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = UsefulUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.altece.UsefulUtilsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		AA11D4271CC8AD8900A19EEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -227,41 +427,30 @@
 			};
 			name = Release;
 		};
-		AA11D42A1CC8AD8900A19EEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		AA11D42B1CC8AD8900A19EEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA032BB01CCB2A54009AA88B /* Build configuration list for PBXNativeTarget "UsefulUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA032BB11CCB2A54009AA88B /* Debug */,
+				AA032BB21CCB2A54009AA88B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA032BB31CCB2A54009AA88B /* Build configuration list for PBXNativeTarget "UsefulUtilsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA032BB41CCB2A54009AA88B /* Debug */,
+				AA032BB51CCB2A54009AA88B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "UsefulUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA11D4271CC8AD8900A19EEB /* Debug */,
 				AA11D4281CC8AD8900A19EEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "UsefulUtils" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AA11D42A1CC8AD8900A19EEB /* Debug */,
-				AA11D42B1CC8AD8900A19EEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
