@@ -41,6 +41,7 @@ typedef void (^SBSourceSubscriberBlock)(id value);
     self = [super init];
     if (!self) return nil;
     _subscribers = [[NSMutableArray alloc] init];
+    _revokedSignal = [[SBSignal alloc] init];
     _value = value;
     return self;
 }
@@ -75,6 +76,7 @@ typedef void (^SBSourceSubscriberBlock)(id value);
     for (SBSourceSubscriber *subscriber in _subscribers) {
         [subscriber.derivedSource revokeValue];
     }
+    [_revokedSignal notify];
 }
 
 #pragma mark Subscribing

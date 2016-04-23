@@ -28,7 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA11D4201CC8AD8900A19EEB /* libSB-Obj-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSB-Obj-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUsefulUtils.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA11D4231CC8AD8900A19EEB /* SBSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBSource.h; sourceTree = "<group>"; };
 		AA11D4251CC8AD8900A19EEB /* SBSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBSource.m; sourceTree = "<group>"; };
 		AA11D42C1CC8AEE600A19EEB /* SBSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSubscription.h; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		AA11D4171CC8AD8900A19EEB = {
 			isa = PBXGroup;
 			children = (
-				AA11D4221CC8AD8900A19EEB /* SB-Obj-C */,
+				AA11D4221CC8AD8900A19EEB /* UsefulUtils */,
 				AA11D4211CC8AD8900A19EEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,12 +61,12 @@
 		AA11D4211CC8AD8900A19EEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA11D4201CC8AD8900A19EEB /* libSB-Obj-C.a */,
+				AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA11D4221CC8AD8900A19EEB /* SB-Obj-C */ = {
+		AA11D4221CC8AD8900A19EEB /* UsefulUtils */ = {
 			isa = PBXGroup;
 			children = (
 				AA11D4231CC8AD8900A19EEB /* SBSource.h */,
@@ -78,15 +78,15 @@
 				AA37478C1CC8BC0B005FB31E /* SBCancellable.h */,
 				AA37478D1CC8BC0B005FB31E /* SBCancellable.m */,
 			);
-			path = "SB-Obj-C";
+			path = "UsefulUtils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA11D41F1CC8AD8900A19EEB /* SB-Obj-C */ = {
+		AA11D41F1CC8AD8900A19EEB /* UsefulUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SB-Obj-C" */;
+			buildConfigurationList = AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "UsefulUtils" */;
 			buildPhases = (
 				AA11D41C1CC8AD8900A19EEB /* Sources */,
 				AA11D41D1CC8AD8900A19EEB /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = "SB-Obj-C";
-			productName = "SB-Obj-C";
-			productReference = AA11D4201CC8AD8900A19EEB /* libSB-Obj-C.a */;
+			name = "UsefulUtils";
+			productName = "UsefulUtils";
+			productReference = AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SB-Obj-C" */;
+			buildConfigurationList = AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "UsefulUtils" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA11D41F1CC8AD8900A19EEB /* SB-Obj-C */,
+				AA11D41F1CC8AD8900A19EEB /* UsefulUtils */,
 			);
 		};
 /* End PBXProject section */
@@ -248,7 +248,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "SB-Obj-C" */ = {
+		AA11D41B1CC8AD8900A19EEB /* Build configuration list for PBXProject "UsefulUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA11D4271CC8AD8900A19EEB /* Debug */,
@@ -257,7 +257,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "SB-Obj-C" */ = {
+		AA11D4291CC8AD8900A19EEB /* Build configuration list for PBXNativeTarget "UsefulUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA11D42A1CC8AD8900A19EEB /* Debug */,

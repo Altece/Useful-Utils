@@ -10,6 +10,11 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 @interface SBSource<T> : NSObject
 
+///
+/// A signal to notify subscribers when this source has its value revoked.
+///
+@property (nonatomic, readonly) SBSignal *revokedSignal;
+
 #pragma mark Initializing a new Source
 
 ///
