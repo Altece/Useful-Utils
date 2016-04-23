@@ -71,6 +71,17 @@
     return [[self alloc] initWithQueue:dispatch_get_main_queue()];
 }
 
++ (instancetype)sharedDispatcher {
+    static UUDispatchAsync *dispatcher;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *name = @"com.altece.UsefulUtils.DispatchAsync";
+        dispatch_queue_t queue = [UUDispatchQueue concurrentQueueWithName:name];
+        dispatcher = [[self alloc] initWithQueue:queue];
+    });
+    return dispatcher;
+}
+
 @end
 
 #pragma mark - Dispatch After
@@ -97,6 +108,17 @@
     return [[self alloc] initWithQueue:dispatch_get_main_queue()];
 }
 
++ (instancetype)sharedDispatcher {
+    static UUDispatchAfter *dispatcher;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *name = @"com.altece.UsefulUtils.DispatchAfter";
+        dispatch_queue_t queue = [UUDispatchQueue concurrentQueueWithName:name];
+        dispatcher = [[self alloc] initWithQueue:queue];
+    });
+    return dispatcher;
+}
+
 @end
 
 #pragma mark - Dispatch Once
@@ -113,6 +135,24 @@
 
 - (void)dispatchBlock:(dispatch_block_t)block {
     dispatch_once(&_onceToken, block);
+}
+
+@end
+
+#pragma mark - Dispatch Qeue
+
+@implementation UUDispatchQueue
+
++ (dispatch_queue_t)concurrentQueueWithName:(NSString *)name {
+    return dispatch_queue_create([name UTF8String] ?: "", DISPATCH_QUEUE_CONCURRENT);
+}
+
++ (dispatch_queue_t)serialQueueWithName:(NSString *)name {
+    return dispatch_queue_create([name UTF8String] ?: "", DISPATCH_QUEUE_SERIAL);
+}
+
++ (nullable dispatch_queue_t)globalQueueWithPriority:(dispatch_queue_priority_t)priority {
+    return dispatch_get_global_queue(priority, 0);
 }
 
 @end

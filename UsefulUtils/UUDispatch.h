@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #pragma mark - Dispatcher Protocol Definition
 
 ///
@@ -66,9 +68,14 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 ///
-/// Create a dispatch async object for the main queue.
+/// A dispatch async object for the main queue.
 ///
 + (instancetype)mainQueueDispatcher;
+
+///
+/// A dispatch async object for an unnamed concurrent queue.
+///
++ (instancetype)sharedDispatcher;;
 
 @end
 
@@ -93,6 +100,11 @@
 ///
 + (instancetype)mainQueueDispatcher;
 
+///
+/// A dispatch after object for an unnamed concurrent queue.
+///
++ (instancetype)sharedDispatcher;;
+
 @end
 
 #pragma mark - Dispatch Once
@@ -106,3 +118,29 @@
 @interface UUDispatchOnce : NSObject <UUDispatch>
 
 @end
+
+#pragma mark - Dispatch Queue Factory
+
+///
+/// A convenient wrapper around the GCD function calls for creating dispatch queues.
+///
+@interface UUDispatchQueue : NSObject
+
+///
+/// Create a new concurrent queue with the given name.
+///
++ (dispatch_queue_t)concurrentQueueWithName:(NSString *)name;
+
+///
+/// Create a new serial queue with the given name.
+///
++ (dispatch_queue_t)serialQueueWithName:(NSString *)name;
+
+///
+/// Get a global queue for the given priority level, if there is one available,
+///
++ (nullable dispatch_queue_t)globalQueueWithPriority:(dispatch_queue_priority_t)priority;
+
+@end
+
+NS_ASSUME_NONNULL_END
