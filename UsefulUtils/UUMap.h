@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@protocol UUDispatch;
+@protocol UUDispatcher;
 
 NS_ASSUME_NONNULL_BEGIN
 

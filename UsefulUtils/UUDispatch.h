@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// A protocol to abstract away implementation details when using GCD.
 ///
-@protocol UUDispatch <NSObject>
+@protocol UUDispatcher <NSObject>
 
 ///
 /// Dispatch the given block using a method specified by the implementation.
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// A protocol to descrive a dispatcher that is capable of being cancelled.
 ///
-@protocol UUCancellableDispatch <NSObject>
+@protocol UUCancellableDispatcher <NSObject>
 
 ///
 /// Dispatch the given block using the method specified by the implementation.
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// An instance of UUDispatch which immediately calls the passed in block.
 ///
-@interface UUDispatchImmediately : NSObject <UUDispatch>
+@interface UUDispatchImmediately : NSObject <UUDispatcher>
 
 + (instancetype)sharedDispatcher;
 
@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///       and -dispatchBlock: is called from the main queue, the block
 ///       will be called on immediately instad of using dispatch_sync().
 ///
-@interface UUDispatchSync : NSObject <UUDispatch>
+@interface UUDispatchSync : NSObject <UUDispatcher>
 
 ///
 /// Initialize a new dispatch sync object with the given dispatch queue.
@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// An instance of UUDispatch which asynchroniously calls
 /// a block on the given queue.
 ///
-@interface UUDispatchAsync : NSObject <UUDispatch, UUCancellableDispatch>
+@interface UUDispatchAsync : NSObject <UUDispatcher, UUCancellableDispatcher>
 
 ///
 /// Initialize a new dispatch async object with the given dispatch queue.
@@ -101,7 +101,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// An instance of UUDispatch which asynchroniously calls
 /// a block on the given queue after a certain amount of time has passed.
 ///
-@interface UUDispatchAfter : NSObject <UUDispatch, UUCancellableDispatch>
+@interface UUDispatchAfter : NSObject <UUDispatcher, UUCancellableDispatcher>
 
 ///
 /// Initialize a new dispatch after object with the given
@@ -134,7 +134,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @note Initialization of this object includes a call to OSMemoryBarrier(),
 ///       which may cause performance issues in some specific circumstances.
 ///
-@interface UUDispatchOnce : NSObject <UUDispatch>
+@interface UUDispatchOnce : NSObject <UUDispatcher>
 
 @end
 

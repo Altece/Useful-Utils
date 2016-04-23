@@ -67,13 +67,13 @@
     return [self subscribeNext:block on:[UUDispatchImmediately sharedDispatcher]];
 }
 
-- (UUSubscription *)subscribe:(void (^)(id))block on:(id<UUDispatch>)dispatcher {
+- (UUSubscription *)subscribe:(void (^)(id))block on:(id<UUDispatcher>)dispatcher {
     NSAssert(block != nil, @"Subscribing with a nil block is not allowed.");
     return [self subscribeSubscriber:
             [[UUValueTask alloc] initWithBlock:block on:dispatcher]];
 }
 
-- (UUSubscription *)subscribeNext:(void (^)(id))block on:(id<UUDispatch>)dispatcher {
+- (UUSubscription *)subscribeNext:(void (^)(id))block on:(id<UUDispatcher>)dispatcher {
     NSAssert(block != nil, @"Subscribing next with a nil block is not allowed.");
     return [self subscribeNextSubscriber:
             [[UUValueTask alloc] initWithBlock:block on:dispatcher]];
@@ -102,7 +102,7 @@
 }
 
 - (UUSource *)sourceWithActionableBlock:(void (^)(UUSource *, id))block
-                                     on:(id<UUDispatch>)dispatcher {
+                                     on:(id<UUDispatcher>)dispatcher {
     NSAssert(block != nil,
              @"Creating a derived source without an actionable block is not allowed.");
     UUSource *source = [[UUSource alloc] init];

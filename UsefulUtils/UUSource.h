@@ -6,7 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class UUSignal;
 @class UUSubscription;
-@protocol UUDispatch;
+@protocol UUDispatcher;
 
 ///
 /// An object which represents a given value as it changes over time.
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns A subscription object which must be retained in order to have
 ///          the subscribed block continue to receive pushed values.
 ///
-- (UUSubscription *)subscribe:(void (^)(T value))block on:(id<UUDispatch>)dispatcher;
+- (UUSubscription *)subscribe:(void (^)(T value))block on:(id<UUDispatcher>)dispatcher;
 
 ///
 /// Call on the given block using the given dispatcher whenever a value
@@ -99,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns A subscription object which must be retained in order to have
 ///          the subscribed block continue to receive pushed values.
 ///
-- (UUSubscription *)subscribeNext:(void (^)(T))block on:(id<UUDispatch>)dispatcher;
+- (UUSubscription *)subscribeNext:(void (^)(T))block on:(id<UUDispatcher>)dispatcher;
 
 #pragma mark Creating Derived Sources
 

@@ -4,7 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class UUSource<T>;
 @class UUSubscription;
-@protocol UUDispatch;
+@protocol UUDispatcher;
 
 ///
 /// An object which represents the occurrence of a specific event.
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Subscribe a block to be notified using the given dispatcher
 /// whenever the signal notifies its subscribers.
 ///
-- (UUSubscription *)subscribeNext:(void (^)())block on:(id<UUDispatch>)dispatcher;
+- (UUSubscription *)subscribeNext:(void (^)())block on:(id<UUDispatcher>)dispatcher;
 
 ///
 /// Merge a collection of signals into one such that when any one of them

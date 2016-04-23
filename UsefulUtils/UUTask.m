@@ -6,10 +6,10 @@
 
 @implementation UUTask {
     UUTaskBlock _block;
-    id<UUDispatch> _dispatcher;
+    id<UUDispatcher> _dispatcher;
 }
 
-- (instancetype)initWithBlock:(UUTaskBlock)block on:(id<UUDispatch>)dispatcher {
+- (instancetype)initWithBlock:(UUTaskBlock)block on:(id<UUDispatcher>)dispatcher {
     self = [super init];
     if (!self) return nil;
     _block = block;
@@ -27,10 +27,10 @@
 
 @implementation UUValueTask {
     UUValueTaskBlock _block;
-    id<UUDispatch> _dispatcher;
+    id<UUDispatcher> _dispatcher;
 }
 
-- (instancetype)initWithBlock:(void (^)(id))block on:(id<UUDispatch>)dispatcher {
+- (instancetype)initWithBlock:(void (^)(id))block on:(id<UUDispatcher>)dispatcher {
     self = [super init];
     if (!self) return nil;
     _block = block;

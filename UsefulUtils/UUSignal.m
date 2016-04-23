@@ -37,7 +37,7 @@
     return [self subscribeNext:block on:[UUDispatchImmediately sharedDispatcher]];
 }
 
-- (UUSubscription *)subscribeNext:(void (^)())block on:(id<UUDispatch>)dispatcher {
+- (UUSubscription *)subscribeNext:(void (^)())block on:(id<UUDispatcher>)dispatcher {
     UUTask *subscriber = [[UUTask alloc] initWithBlock:block on:dispatcher];
     [_subscribers addObject:subscriber];
     return [[UUSubscription alloc] initWithOriginator:self cancellationBlock:^{

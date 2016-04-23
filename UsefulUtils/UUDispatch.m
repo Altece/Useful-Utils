@@ -8,7 +8,7 @@
 /// A convenience function for creating a cancellable dispatch
 /// from a normal dispatcher.
 ///
-static UUCancellable *cancellableDispatch(id<UUDispatch> dispatcher,
+static UUCancellable *cancellableDispatch(id<UUDispatcher> dispatcher,
                                           dispatch_block_t block) {
     NSLock *lock = [[NSLock alloc] init];
     __block BOOL shouldContinue = YES;
