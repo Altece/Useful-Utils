@@ -1,22 +1,22 @@
-#import "SBSource.h"
+#import "UUSource.h"
 
-#import "SBSignal.h"
-#import "SBSubscription.h"
+#import "UUSignal.h"
+#import "UUSubscription.h"
 
 #pragma mark - Internal Source Subscription
 
-typedef void (^SBSourceSubscriberBlock)(id value);
+typedef void (^UUSourceSubscriberBlock)(id value);
 
-@interface SBSourceSubscriber : NSObject
+@interface UUSourceSubscriber : NSObject
 
-@property (nonatomic, readonly, strong, nonnull) SBSourceSubscriberBlock subscriptionBlock;
+@property (nonatomic, readonly, strong, nonnull) UUSourceSubscriberBlock subscriptionBlock;
 
-@property (nonatomic, readonly, strong, nullable) SBSource *derivedSource;
+@property (nonatomic, readonly, strong, nullable) UUSource *derivedSource;
 
 - (instancetype)initWithSubscriptionBlock:(void (^)(id value))block;
 
-- (instancetype)initForDerivedSource:(nullable SBSource *)derivedSoure
-               withSubscriptionBlock:(SBSourceSubscriberBlock)block NS_DESIGNATED_INITIALIZER;
+- (instancetype)initForDerivedSource:(nullable UUSource *)derivedSoure
+               withSubscriptionBlock:(UUSourceSubscriberBlock)block NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;
 
@@ -24,9 +24,9 @@ typedef void (^SBSourceSubscriberBlock)(id value);
 
 #pragma mark - Source Implementation
 
-@implementation SBSource {
-    NSMutableArray<SBSourceSubscriber *> *_subscribers;
-    SBSubscription *_Nullable _internalSubscription;
+@implementation UUSource {
+    NSMutableArray<UUSourceSubscriber *> *_subscribers;
+    UUSubscription *_Nullable _internalSubscription;
     id _Nullable _value;
 }
 
@@ -41,17 +41,17 @@ typedef void (^SBSourceSubscriberBlock)(id value);
     self = [super init];
     if (!self) return nil;
     _subscribers = [[NSMutableArray alloc] init];
-    _revokedSignal = [[SBSignal alloc] init];
+    _revokedSignal = [[UUSignal alloc] init];
     _value = value;
     return self;
 }
 
-- (id)initWithSignal:(SBSignal *)signal transformationBlock:(id (^)())block {
+- (id)initWithSignal:(UUSignal *)signal transformationBlock:(id (^)())block {
     self = [self init];
     if (!self) return nil;
     NSAssert(signal != nil, @"Creating a source from a nil signal is not allowed.");
     NSAssert(block != nil, @"Creating a source from a signal with a nil transformation block is not allowed.");
-    __weak SBSource *weakSelf = self;
+    __weak UUSource *weakSelf = self;
     _internalSubscription = [signal subscribeNext:^{
         [weakSelf pushValue:block()];
     }];
@@ -63,7 +63,7 @@ typedef void (^SBSourceSubscriberBlock)(id value);
 - (void)pushValue:(id)value {
 	if (value) {
         _value = value;
-        for (SBSourceSubscriber *subscriber in _subscribers) {
+        for (UUSourceSubscriber *subscriber in _subscribers) {
             subscriber.subscriptionBlock(value);
         }
 	} else {
@@ -73,7 +73,7 @@ typedef void (^SBSourceSubscriberBlock)(id value);
 
 - (void)revokeValue {
     _value = nil;
-    for (SBSourceSubscriber *subscriber in _subscribers) {
+    for (UUSourceSubscriber *subscriber in _subscribers) {
         [subscriber.derivedSource revokeValue];
     }
     [_revokedSignal notify];
@@ -81,41 +81,41 @@ typedef void (^SBSourceSubscriberBlock)(id value);
 
 #pragma mark Subscribing
 
-- (SBSubscription *)subscribe:(void (^)(id))block {
+- (UUSubscription *)subscribe:(void (^)(id))block {
     NSAssert(block != nil, @"Subscribing with a nil block is not allowed.");
-    return [self subscribeSubscriber:[[SBSourceSubscriber alloc] initWithSubscriptionBlock:block]];
+    return [self subscribeSubscriber:[[UUSourceSubscriber alloc] initWithSubscriptionBlock:block]];
 }
 
-- (SBSubscription *)subscribeNext:(void (^)(id))block {
+- (UUSubscription *)subscribeNext:(void (^)(id))block {
     NSAssert(block != nil, @"Subscribing next with a nil block is not allowed.");
-    return [self subscribeNextSubscriber:[[SBSourceSubscriber alloc] initWithSubscriptionBlock:block]];
+    return [self subscribeNextSubscriber:[[UUSourceSubscriber alloc] initWithSubscriptionBlock:block]];
 }
 
 #pragma mark Internal Subscribing
 
-- (SBSubscription *)subscribeSubscriber:(SBSourceSubscriber *)subscriber {
+- (UUSubscription *)subscribeSubscriber:(UUSourceSubscriber *)subscriber {
     if (_value) {
         subscriber.subscriptionBlock(_value);
     }
     return [self subscribeNextSubscriber:subscriber];
 }
 
-- (SBSubscription *)subscribeNextSubscriber:(SBSourceSubscriber *)subscriber {
+- (UUSubscription *)subscribeNextSubscriber:(UUSourceSubscriber *)subscriber {
     [_subscribers addObject:subscriber];
-    return [[SBSubscription alloc] initWithOriginator:self terminationBlock:^{
+    return [[UUSubscription alloc] initWithOriginator:self terminationBlock:^{
         [_subscribers removeObject:subscriber];
     }];
 }
 
 #pragma mark Derived Sources
 
-- (SBSource *)sourceWithActionableBlock:(void (^)(SBSource *, id))block {
+- (UUSource *)sourceWithActionableBlock:(void (^)(UUSource *, id))block {
     NSAssert(block != nil, @"Creating a derived source with a nil actionable block is not allowed.");
-    SBSource *source = [[SBSource alloc] init];
-    __weak SBSource *weakSource = source;
-    SBSourceSubscriber *subscriber = [[SBSourceSubscriber alloc] initForDerivedSource:source
+    UUSource *source = [[UUSource alloc] init];
+    __weak UUSource *weakSource = source;
+    UUSourceSubscriber *subscriber = [[UUSourceSubscriber alloc] initForDerivedSource:source
                                                                   withSubscriptionBlock:^(id value) {
-                                                                      SBSource *source = weakSource;
+                                                                      UUSource *source = weakSource;
                                                                       if (source) {
                                                                           block(weakSource, value);
                                                                       }
@@ -124,18 +124,18 @@ typedef void (^SBSourceSubscriberBlock)(id value);
     return source;
 }
 
-- (SBSource *)filter:(BOOL (^)(id))condition {
+- (UUSource *)filter:(BOOL (^)(id))condition {
     NSAssert(condition != nil, @"Filtering a source with a nil condition block is not allowed.");
-    return [self sourceWithActionableBlock:^(SBSource *derivedSource, id value) {
+    return [self sourceWithActionableBlock:^(UUSource *derivedSource, id value) {
         if (condition(value)) {
             [derivedSource pushValue:value];
         }
     }];
 }
 
-- (SBSource *)map:(id (^)(id))transformation {
+- (UUSource *)map:(id (^)(id))transformation {
     NSAssert(transformation != nil, @"Mapping a source with a nil transformation block is not allowed.");
-    return [self sourceWithActionableBlock:^(SBSource *derivedSource, id value) {
+    return [self sourceWithActionableBlock:^(UUSource *derivedSource, id value) {
         [derivedSource pushValue:transformation(value)];
     }];
 }
@@ -144,13 +144,13 @@ typedef void (^SBSourceSubscriberBlock)(id value);
 
 #pragma mark - Internal Source Subscriber Implementation
 
-@implementation SBSourceSubscriber
+@implementation UUSourceSubscriber
 
 - (instancetype)initWithSubscriptionBlock:(void (^)(id))block {
     return [self initForDerivedSource:nil withSubscriptionBlock:block];
 }
 
-- (instancetype)initForDerivedSource:(SBSource *)derivedSoure withSubscriptionBlock:(SBSourceSubscriberBlock)block {
+- (instancetype)initForDerivedSource:(UUSource *)derivedSoure withSubscriptionBlock:(UUSourceSubscriberBlock)block {
     self = [super init];
     if (!self) return nil;
     _derivedSource = derivedSoure;

@@ -2,13 +2,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SBSource<T>;
-@class SBSubscription;
+@class UUSource<T>;
+@class UUSubscription;
 
 ///
 /// An object which represents the occurrence of a specific event.
 ///
-@interface SBSignal : NSObject
+@interface UUSignal : NSObject
 
 ///
 /// Initialise a new signal object.
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Initialize a new signal object that will notify subscribers
 /// whenever a new value is pushed to the given source.
 ///
-- (instancetype)initWithSource:(SBSource *)source;
+- (instancetype)initWithSource:(UUSource *)source;
 
 ///
 /// Call on all subscribed blocks to notify them that the event has occurred.
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Subscribe a block to be notified whenever the signal notifies its subscribers.
 ///
-- (SBSubscription *)subscribeNext:(void (^)())block;
+- (UUSubscription *)subscribeNext:(void (^)())block;
 
 ///
 /// Merge a collection of signals into one such that when any one of them
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///       to the merged signal. Subscribers to the component signals will not
 ///       be notified.
 ///
-+ (SBSignal *)coalesceSignals:(NSArray<SBSignal *> *)signals;
++ (UUSignal *)coalesceSignals:(NSArray<UUSignal *> *)signals;
 
 @end
 

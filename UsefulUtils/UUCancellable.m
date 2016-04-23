@@ -1,6 +1,6 @@
-#import "SBCancellable.h"
+#import "UUCancellable.h"
 
-@implementation SBCancellable {
+@implementation UUCancellable {
     void (^_cancellationBlock)();
 }
 
@@ -21,9 +21,9 @@
     }
 }
 
-+ (SBCancellable *)coalesceCancellables:(NSArray<SBCancellable *> *)cancellables {
++ (UUCancellable *)coalesceCancellables:(NSArray<UUCancellable *> *)cancellables {
     return [[[self class] alloc] initWithCancellationBlock:^{
-        for (SBCancellable *cancellable in cancellables) {
+        for (UUCancellable *cancellable in cancellables) {
             [cancellable cancel];
         }
     }];

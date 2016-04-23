@@ -1,11 +1,11 @@
-#import "SBSignal.h"
+#import "UUSignal.h"
 
-#import "SBSource.h"
-#import "SBSubscription.h"
+#import "UUSource.h"
+#import "UUSubscription.h"
 
-@implementation SBSignal {
+@implementation UUSignal {
     NSMutableArray<void (^)()> *_subscribers;
-    SBSubscription *_internalSubscription;
+    UUSubscription *_internalSubscription;
 }
 
 - (id)init {
@@ -15,10 +15,10 @@
     return self;
 }
 
-- (id)initWithSource:(SBSource *)source {
+- (id)initWithSource:(UUSource *)source {
     self = [self init];
     if (!self) return nil;
-    __weak SBSignal *weakSelf = self;
+    __weak UUSignal *weakSelf = self;
     _internalSubscription = [source subscribeNext:^(id value) {
         [weakSelf notify];
     }];
@@ -31,24 +31,24 @@
     }
 }
 
-- (SBSubscription *)subscribeNext:(void (^)())block {
+- (UUSubscription *)subscribeNext:(void (^)())block {
     block = [block copy];
     [_subscribers addObject:block];
-    return [[SBSubscription alloc] initWithOriginator:self terminationBlock:^{
+    return [[UUSubscription alloc] initWithOriginator:self terminationBlock:^{
         [_subscribers removeObject:block];
     }];
 }
 
-+ (SBSignal *)coalesceSignals:(NSArray<SBSignal *> *)signals {
-    SBSignal *resultingSignal = [[[self class] alloc] init];
++ (UUSignal *)coalesceSignals:(NSArray<UUSignal *> *)signals {
+    UUSignal *resultingSignal = [[[self class] alloc] init];
     NSMutableArray *subscriptions = [[NSMutableArray alloc] init];
-    for (SBSignal *signal in signals) {
-        SBSubscription *subscription = [signal subscribeNext:^{
+    for (UUSignal *signal in signals) {
+        UUSubscription *subscription = [signal subscribeNext:^{
             [resultingSignal notify];
         }];
         [subscriptions addObject:subscription];
     }
-    resultingSignal->_internalSubscription = [SBSubscription coalesceSubscriptions:subscriptions];
+    resultingSignal->_internalSubscription = [UUSubscription coalesceSubscriptions:subscriptions];
     return resultingSignal;
 }
 

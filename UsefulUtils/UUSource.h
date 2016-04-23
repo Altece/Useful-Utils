@@ -2,18 +2,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SBSignal;
-@class SBSubscription;
+@class UUSignal;
+@class UUSubscription;
 
 ///
 /// An object which represents a given value as it changes over time.
 ///
-@interface SBSource<T> : NSObject
+@interface UUSource<T> : NSObject
 
 ///
 /// A signal to notify subscribers when this source has its value revoked.
 ///
-@property (nonatomic, readonly) SBSignal *revokedSignal;
+@property (nonatomic, readonly) UUSignal *revokedSignal;
 
 #pragma mark Initializing a new Source
 
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Initialize a source that will derive its value from the given block
 /// whenever the given signal forwards a signal notification.
 ///
-- (id)initWithSignal:(SBSignal *)signal transformationBlock:(id (^)())block;
+- (id)initWithSignal:(UUSignal *)signal transformationBlock:(id (^)())block;
 
 #pragma mark Pushing and Revoking Values from Sources
 
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns A subscription object which must be retained in order to have
 ///          the subscribed block continue to receive pushed values.
 ///
-- (SBSubscription *)subscribe:(void (^)(T value))block;
+- (UUSubscription *)subscribe:(void (^)(T value))block;
 
 ///
 /// Call on the given block whenever a value is pushed to the source,
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns A subscription object which must be retained in order to have
 ///          the subscribed block continue to receive pushed values.
 ///
-- (SBSubscription *)subscribeNext:(void (^)(T value))block;
+- (UUSubscription *)subscribeNext:(void (^)(T value))block;
 
 #pragma mark Creating Derived Sources
 
@@ -84,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param The serived source whose values will be provided from a combination of
 ///        both the original source and the subblied actionable block.
 ///
-- (SBSource *)sourceWithActionableBlock:(void (^)(SBSource *derivedSource, T value))block;
+- (UUSource *)sourceWithActionableBlock:(void (^)(UUSource *derivedSource, T value))block;
 
 ///
 /// Create a derived source which contains only values that satisify the supplied condition.
@@ -93,7 +93,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns A source which contains values from the original source which statsify
 ///          the gven condition.
 ///
-- (SBSource<T> *)filter:(BOOL (^)(T value))condition;
+- (UUSource<T> *)filter:(BOOL (^)(T value))condition;
 
 ///
 /// Create a derived source which contains values that are derived from the original source
@@ -102,7 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns A source which contains values that are derived from values pushed to the
 ///          original source.
 ///
-- (SBSource *)map:(id (^)(T value))transformation;
+- (UUSource *)map:(id (^)(T value))transformation;
 
 @end
 

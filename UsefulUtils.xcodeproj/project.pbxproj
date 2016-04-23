@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA11D4241CC8AD8900A19EEB /* SBSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* SBSource.h */; };
-		AA11D4261CC8AD8900A19EEB /* SBSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* SBSource.m */; };
-		AA11D42E1CC8AEE600A19EEB /* SBSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* SBSubscription.m */; };
-		AA37478E1CC8BC0B005FB31E /* SBCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* SBCancellable.m */; };
-		AA3747911CC8BE02005FB31E /* SBSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* SBSignal.m */; };
+		AA11D4241CC8AD8900A19EEB /* UUSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA11D4231CC8AD8900A19EEB /* UUSource.h */; };
+		AA11D4261CC8AD8900A19EEB /* UUSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D4251CC8AD8900A19EEB /* UUSource.m */; };
+		AA11D42E1CC8AEE600A19EEB /* UUSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */; };
+		AA37478E1CC8BC0B005FB31E /* UUCancellable.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37478D1CC8BC0B005FB31E /* UUCancellable.m */; };
+		AA3747911CC8BE02005FB31E /* UUSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3747901CC8BE02005FB31E /* UUSignal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,22 +21,22 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				AA11D4241CC8AD8900A19EEB /* SBSource.h in CopyFiles */,
+				AA11D4241CC8AD8900A19EEB /* UUSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUsefulUtils.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA11D4231CC8AD8900A19EEB /* SBSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBSource.h; sourceTree = "<group>"; };
-		AA11D4251CC8AD8900A19EEB /* SBSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBSource.m; sourceTree = "<group>"; };
-		AA11D42C1CC8AEE600A19EEB /* SBSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSubscription.h; sourceTree = "<group>"; };
-		AA11D42D1CC8AEE600A19EEB /* SBSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSubscription.m; sourceTree = "<group>"; };
-		AA37478C1CC8BC0B005FB31E /* SBCancellable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCancellable.h; sourceTree = "<group>"; };
-		AA37478D1CC8BC0B005FB31E /* SBCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCancellable.m; sourceTree = "<group>"; };
-		AA37478F1CC8BE02005FB31E /* SBSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSignal.h; sourceTree = "<group>"; };
-		AA3747901CC8BE02005FB31E /* SBSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSignal.m; sourceTree = "<group>"; };
+		AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUsefulUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA11D4231CC8AD8900A19EEB /* UUSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSource.h; sourceTree = "<group>"; };
+		AA11D4251CC8AD8900A19EEB /* UUSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSource.m; sourceTree = "<group>"; };
+		AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUSubscription.h; sourceTree = "<group>"; };
+		AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUSubscription.m; sourceTree = "<group>"; };
+		AA37478C1CC8BC0B005FB31E /* UUCancellable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUCancellable.h; sourceTree = "<group>"; };
+		AA37478D1CC8BC0B005FB31E /* UUCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUCancellable.m; sourceTree = "<group>"; };
+		AA37478F1CC8BE02005FB31E /* UUSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUSignal.h; sourceTree = "<group>"; };
+		AA3747901CC8BE02005FB31E /* UUSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUSignal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,16 +69,16 @@
 		AA11D4221CC8AD8900A19EEB /* UsefulUtils */ = {
 			isa = PBXGroup;
 			children = (
-				AA11D4231CC8AD8900A19EEB /* SBSource.h */,
-				AA11D4251CC8AD8900A19EEB /* SBSource.m */,
-				AA37478F1CC8BE02005FB31E /* SBSignal.h */,
-				AA3747901CC8BE02005FB31E /* SBSignal.m */,
-				AA11D42C1CC8AEE600A19EEB /* SBSubscription.h */,
-				AA11D42D1CC8AEE600A19EEB /* SBSubscription.m */,
-				AA37478C1CC8BC0B005FB31E /* SBCancellable.h */,
-				AA37478D1CC8BC0B005FB31E /* SBCancellable.m */,
+				AA11D4231CC8AD8900A19EEB /* UUSource.h */,
+				AA11D4251CC8AD8900A19EEB /* UUSource.m */,
+				AA37478F1CC8BE02005FB31E /* UUSignal.h */,
+				AA3747901CC8BE02005FB31E /* UUSignal.m */,
+				AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */,
+				AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */,
+				AA37478C1CC8BC0B005FB31E /* UUCancellable.h */,
+				AA37478D1CC8BC0B005FB31E /* UUCancellable.m */,
 			);
-			path = "UsefulUtils";
+			path = UsefulUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,8 +96,8 @@
 			);
 			dependencies = (
 			);
-			name = "UsefulUtils";
-			productName = "UsefulUtils";
+			name = UsefulUtils;
+			productName = UsefulUtils;
 			productReference = AA11D4201CC8AD8900A19EEB /* libUsefulUtils.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -137,10 +137,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA37478E1CC8BC0B005FB31E /* SBCancellable.m in Sources */,
-				AA11D42E1CC8AEE600A19EEB /* SBSubscription.m in Sources */,
-				AA11D4261CC8AD8900A19EEB /* SBSource.m in Sources */,
-				AA3747911CC8BE02005FB31E /* SBSignal.m in Sources */,
+				AA37478E1CC8BC0B005FB31E /* UUCancellable.m in Sources */,
+				AA11D42E1CC8AEE600A19EEB /* UUSubscription.m in Sources */,
+				AA11D4261CC8AD8900A19EEB /* UUSource.m in Sources */,
+				AA3747911CC8BE02005FB31E /* UUSignal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

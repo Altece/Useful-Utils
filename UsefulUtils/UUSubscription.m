@@ -1,6 +1,6 @@
-#import "SBSubscription.h"
+#import "UUSubscription.h"
 
-@implementation SBSubscription {
+@implementation UUSubscription {
     id _originator;
     void (^_cancellationBlock)();
 }
@@ -31,9 +31,9 @@
     }
 }
 
-+ (SBSubscription *)coalesceSubscriptions:(NSArray<SBSubscription *> *)subscriptions {
++ (UUSubscription *)coalesceSubscriptions:(NSArray<UUSubscription *> *)subscriptions {
     return [[[self class] alloc] initWithOriginator:nil terminationBlock:^{
-        for (SBSubscription *subscription in subscriptions) {
+        for (UUSubscription *subscription in subscriptions) {
             [subscription cancel];
         }
     }];

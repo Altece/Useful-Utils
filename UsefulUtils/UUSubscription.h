@@ -7,7 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The subscription is kept open until the -cancel method is called,
 /// or the subscription is deallocated.
 ///
-@interface SBSubscription : NSObject
+@interface UUSubscription : NSObject
 
 ///
 /// Initialize a new subscription with the given originator and termination block.
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Merge a collection of subscriptions into one such that
 /// they can all be retained and cancelled at once.
 ///
-+ (SBSubscription *)coalesceSubscriptions:(NSArray<SBSubscription *> *)subscriptions;
++ (UUSubscription *)coalesceSubscriptions:(NSArray<UUSubscription *> *)subscriptions;
 
 @end
 

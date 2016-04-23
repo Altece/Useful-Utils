@@ -7,7 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// It is not necessary to retain a reference to this object
 /// if it does not need to be cancelled.
 ///
-@interface SBCancellable : NSObject
+@interface UUCancellable : NSObject
 
 ///
 /// Initialize a new cancellable with the given cancellation block.
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Merge a collection of cancellable objects into one such that
 /// they can all be cancelled at once.
 ///
-+ (SBCancellable *)coalesceCancellables:(NSArray<SBCancellable *> *)cancellables;
++ (UUCancellable *)coalesceCancellables:(NSArray<UUCancellable *> *)cancellables;
 
 @end
 
