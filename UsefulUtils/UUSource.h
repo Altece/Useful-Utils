@@ -1,11 +1,12 @@
 #import <Foundation/Foundation.h>
 
+#import "UUMap.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class UUSignal;
 @class UUSubscription;
 @protocol UUDispatch;
-@protocol UUMap;
 
 ///
 /// An object which represents a given value as it changes over time.

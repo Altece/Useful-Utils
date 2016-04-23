@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Subscribe a block to be notified whenever the signal notifies its subscribers.
 /// @note This is a convenience method for -subscribeNext:on:, and will use
-///       UUDispatchImmediately by default.
+///       the shared instance of UUDispatchImmediately.
 ///
 - (UUSubscription *)subscribeNext:(void (^)())block;
 
