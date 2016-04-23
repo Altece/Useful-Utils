@@ -2,6 +2,8 @@
 
 #import <libkern/OSAtomic.h>
 
+#import "UUCancellable.h"
+
 #pragma mark - Dispatch Immediately
 
 @implementation UUDispatchImmediately
@@ -65,6 +67,24 @@
 
 - (void)dispatchBlock:(dispatch_block_t)block {
     dispatch_async(_queue, block);
+}
+
+- (UUCancellable *)dispatchCancellableBlock:(dispatch_block_t)block {
+    NSLock *lock = [[NSLock alloc] init];
+    __block BOOL shouldContinue = YES;
+    [self dispatchBlock:^{
+        [lock lock];
+        BOOL willContinue = shouldContinue;
+        [lock unlock];
+        if (willContinue) {
+            block();
+        }
+    }];
+    return [[UUCancellable alloc] initWithCancellationBlock:^{
+        [lock lock];
+        shouldContinue = NO;
+        [lock unlock];
+    }];
 }
 
 + (instancetype)mainQueueDispatcher {

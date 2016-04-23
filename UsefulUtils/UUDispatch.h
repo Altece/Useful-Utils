@@ -2,6 +2,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class UUCancellable;
+
 #pragma mark - Dispatcher Protocol Definition
 
 ///
@@ -13,6 +15,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// Dispatch the given block using a method specified by the implementation.
 ///
 - (void)dispatchBlock:(dispatch_block_t)block;
+
+@end
+
+///
+/// A protocol to descrive a dispatcher that is capable of being cancelled.
+///
+@protocol UUCancellableDispatch <NSObject>
+
+///
+/// Dispatch the given block using the method specified by the implementation.
+/// @returns A cancellable object that can be used to cancel the operation
+///          if it hasn't yet begun execution.
+///
+- (UUCancellable *)dispatchCancellableBlock:(dispatch_block_t)block;
 
 @end
 
@@ -58,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// An instance of UUDispatch which asynchroniously calls
 /// a block on the given queue.
 ///
-@interface UUDispatchAsync : NSObject <UUDispatch>
+@interface UUDispatchAsync : NSObject <UUDispatch, UUCancellableDispatch>
 
 ///
 /// Initialize a new dispatch async object with the given dispatch queue.
@@ -85,10 +101,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// An instance of UUDispatch which asynchroniously calls
 /// a block on the given queue after a certain amount of time has passed.
 ///
-@interface UUDispatchAfter : NSObject <UUDispatch>
+@interface UUDispatchAfter : NSObject <UUDispatch, UUCancellableDispatch>
 
 ///
-/// Initialize a new dispatch after object with the given dispatch queue and time delay.
+/// Initialize a new dispatch after object with the given
+/// dispatch queue and time delay.
+/// @param delay The amount of seconds from the time of dispatching
+/// before execution should begin.
 ///
 - (instancetype)initWithQueue:(dispatch_queue_t)queue
                     timeDelay:(NSTimeInterval)delay NS_DESIGNATED_INITIALIZER;
