@@ -105,7 +105,7 @@ static UUCancellable *cancellableDispatch(id<UUDispatcher> dispatcher,
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSString *name = @"com.altece.UsefulUtils.DispatchAsync";
-        dispatch_queue_t queue = [UUDispatchQueue concurrentQueueWithName:name];
+        dispatch_queue_t queue = [UUDispatchQueue concurrentQueueWithLabel:name];
         dispatcher = [[self alloc] initWithQueue:queue];
     });
     return dispatcher;
@@ -146,7 +146,7 @@ static UUCancellable *cancellableDispatch(id<UUDispatcher> dispatcher,
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSString *name = @"com.altece.UsefulUtils.DispatchAfter";
-        dispatch_queue_t queue = [UUDispatchQueue concurrentQueueWithName:name];
+        dispatch_queue_t queue = [UUDispatchQueue concurrentQueueWithLabel:name];
         dispatcher = [[self alloc] initWithQueue:queue];
     });
     return dispatcher;
@@ -176,11 +176,11 @@ static UUCancellable *cancellableDispatch(id<UUDispatcher> dispatcher,
 
 @implementation UUDispatchQueue
 
-+ (dispatch_queue_t)concurrentQueueWithName:(NSString *)name {
-    return dispatch_queue_create([name UTF8String] ?: "", DISPATCH_QUEUE_CONCURRENT);
++ (dispatch_queue_t)concurrentQueueWithLabel:(NSString *)label {
+    return dispatch_queue_create([label UTF8String] ?: "", DISPATCH_QUEUE_CONCURRENT);
 }
 
-+ (dispatch_queue_t)serialQueueWithName:(NSString *)name {
++ (dispatch_queue_t)serialQueueWithLabel:(NSString *)label {
     return dispatch_queue_create([name UTF8String] ?: "", DISPATCH_QUEUE_SERIAL);
 }
 

@@ -148,12 +148,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Create a new concurrent queue with the given name.
 ///
-+ (dispatch_queue_t)concurrentQueueWithName:(NSString *)name;
++ (dispatch_queue_t)concurrentQueueWithLabel:(NSString *)label;
 
 ///
 /// Create a new serial queue with the given name.
 ///
-+ (dispatch_queue_t)serialQueueWithName:(NSString *)name;
++ (dispatch_queue_t)serialQueueWithLabel:(NSString *)label;
 
 ///
 /// Get a global queue for the given priority level, if there is one available,
