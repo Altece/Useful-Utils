@@ -28,7 +28,8 @@
 }
 
 - (void)notify {
-    for (UUTask *subscriber in _subscribers) {
+    NSArray<UUTask *> *subscribers = [_subscribers copy];
+    for (UUTask *subscriber in subscribers) {
         [subscriber performTask];
     }
 }
