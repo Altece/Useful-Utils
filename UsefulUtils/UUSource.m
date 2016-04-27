@@ -44,7 +44,8 @@
 - (void)pushValue:(id)value {
 	if (value) {
         _value = value;
-        for (UUValueTask *subscriber in _subscribers) {
+        NSArray<UUValueTask *> *subscribers = [_subscribers copy];
+        for (UUValueTask *subscriber in subscribers) {
             [subscriber performTaskWithValue:value];
         }
 	} else {
