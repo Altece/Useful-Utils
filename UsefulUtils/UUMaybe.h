@@ -25,6 +25,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
+///
+/// Get access to the value stored in the maybe.
+/// @param defaultValue If the maybe doesn't hold a value,
+///                     this will be the value that gets returned.
+/// @return If this maybe is the result of @c +some: with a non-nil value,
+///         that value will be returned. Otherwise, the given default value
+///         will be returned.
+///
+- (T)valueOr:(T)defaultValue;
+
 @end
 
 NS_ASSUME_NONNULL_END

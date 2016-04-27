@@ -17,4 +17,8 @@
     return self;
 }
 
+- (id)valueOr:(id)defaultValue {
+    return self.value ?: defaultValue;
+}
+
 @end
