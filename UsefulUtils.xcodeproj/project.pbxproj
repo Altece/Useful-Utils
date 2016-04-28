@@ -26,6 +26,8 @@
 		AA032BC51CCB2C62009AA88B /* UUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC31CCB2C62009AA88B /* UUTask.m */; };
 		AA032BC81CCB2DAE009AA88B /* UUMap.h in Headers */ = {isa = PBXBuildFile; fileRef = AA032BC61CCB2DAE009AA88B /* UUMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA032BC91CCB2DAE009AA88B /* UUMap.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC71CCB2DAE009AA88B /* UUMap.m */; };
+		AA33C7331CD1F33A00081F67 /* UULazyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = AA33C7311CD1F33A00081F67 /* UULazyValue.h */; };
+		AA33C7341CD1F33A00081F67 /* UULazyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33C7321CD1F33A00081F67 /* UULazyValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		AA11D4251CC8AD8900A19EEB /* UUSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSource.m; sourceTree = "<group>"; };
 		AA11D42C1CC8AEE600A19EEB /* UUSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUSubscription.h; sourceTree = "<group>"; };
 		AA11D42D1CC8AEE600A19EEB /* UUSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUSubscription.m; sourceTree = "<group>"; };
+		AA33C7311CD1F33A00081F67 /* UULazyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UULazyValue.h; sourceTree = "<group>"; };
+		AA33C7321CD1F33A00081F67 /* UULazyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UULazyValue.m; sourceTree = "<group>"; };
 		AA37478C1CC8BC0B005FB31E /* UUCancellable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUCancellable.h; sourceTree = "<group>"; };
 		AA37478D1CC8BC0B005FB31E /* UUCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUCancellable.m; sourceTree = "<group>"; };
 		AA37478F1CC8BE02005FB31E /* UUSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUSignal.h; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				AA37478D1CC8BC0B005FB31E /* UUCancellable.m */,
 				AA032B971CCB191C009AA88B /* UUDispatch.h */,
 				AA032B981CCB191C009AA88B /* UUDispatch.m */,
+				AA33C7311CD1F33A00081F67 /* UULazyValue.h */,
+				AA33C7321CD1F33A00081F67 /* UULazyValue.m */,
 				AA032BC61CCB2DAE009AA88B /* UUMap.h */,
 				AA032BC71CCB2DAE009AA88B /* UUMap.m */,
 				AA032B941CCB16D9009AA88B /* UUMaybe.h */,
@@ -141,6 +147,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA33C7331CD1F33A00081F67 /* UULazyValue.h in Headers */,
 				AA032BC81CCB2DAE009AA88B /* UUMap.h in Headers */,
 				AA032BA21CCB2A54009AA88B /* UsefulUtils.h in Headers */,
 				AA032BBA1CCB2AA4009AA88B /* UUSubscription.h in Headers */,
@@ -254,6 +261,7 @@
 				AA032BC91CCB2DAE009AA88B /* UUMap.m in Sources */,
 				AA032BBB1CCB2AA4009AA88B /* UUSubscription.m in Sources */,
 				AA032BC51CCB2C62009AA88B /* UUTask.m in Sources */,
+				AA33C7341CD1F33A00081F67 /* UULazyValue.m in Sources */,
 				AA032BBD1CCB2AA4009AA88B /* UUCancellable.m in Sources */,
 				AA032BB91CCB2AA4009AA88B /* UUSignal.m in Sources */,
 				AA032BBF1CCB2AA4009AA88B /* UUMaybe.m in Sources */,
