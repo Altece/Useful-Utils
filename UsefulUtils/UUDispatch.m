@@ -10,20 +10,9 @@
 ///
 static UUCancellable *cancellableDispatch(id<UUDispatcher> dispatcher,
                                           dispatch_block_t block) {
-    NSLock *lock = [[NSLock alloc] init];
-    __block BOOL shouldContinue = YES;
-    [dispatcher dispatchBlock:^{
-        [lock lock];
-        BOOL willContinue = shouldContinue;
-        [lock unlock];
-        if (willContinue) {
-            block();
-        }
-    }];
+    dispatch_block_t cancellableBlock = dispatch_block_create(0, block);
     return [[UUCancellable alloc] initWithCancellationBlock:^{
-        [lock lock];
-        shouldContinue = NO;
-        [lock unlock];
+        dispatch_block_cancel(cancellableBlock);
     }];
 }
 
