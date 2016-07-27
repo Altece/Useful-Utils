@@ -28,13 +28,21 @@
 		AA032BC91CCB2DAE009AA88B /* UUMap.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC71CCB2DAE009AA88B /* UUMap.m */; };
 		AA33C7331CD1F33A00081F67 /* UULazyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = AA33C7311CD1F33A00081F67 /* UULazyValue.h */; };
 		AA33C7341CD1F33A00081F67 /* UULazyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33C7321CD1F33A00081F67 /* UULazyValue.m */; };
+		AAA2F6DD1D487540007E5A49 /* NSNumber+UUILayoutValue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutValue.h */; };
+		AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutValue.m */; };
+		AAA2F6DF1D487540007E5A49 /* UUILayoutAnchor.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */; };
+		AAA2F6E01D487540007E5A49 /* UUILayoutAnchor.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D41D487540007E5A49 /* UUILayoutAnchor.m */; };
+		AAA2F6E11D487540007E5A49 /* UUILayoutAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D51D487540007E5A49 /* UUILayoutAttribute.h */; };
+		AAA2F6E21D487540007E5A49 /* UUILayoutAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D61D487540007E5A49 /* UUILayoutAttribute.m */; };
+		AAA2F6E31D487540007E5A49 /* UUILayoutScaffold.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D71D487540007E5A49 /* UUILayoutScaffold.h */; };
+		AAA2F6E41D487540007E5A49 /* UUILayoutScaffold.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D81D487540007E5A49 /* UUILayoutScaffold.m */; };
+		AAA2F6E51D487540007E5A49 /* UUILayoutScalar.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D91D487540007E5A49 /* UUILayoutScalar.h */; };
+		AAA2F6E61D487540007E5A49 /* UUILayoutScalar.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6DA1D487540007E5A49 /* UUILayoutScalar.m */; };
+		AAA2F6E71D487540007E5A49 /* UUILayoutValue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6DB1D487540007E5A49 /* UUILayoutValue.h */; };
+		AAA2F6E81D487540007E5A49 /* UUILayoutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6DC1D487540007E5A49 /* UUILayoutValue.m */; };
 		AAEA81B61D4321B800E228BF /* UsefulUIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEA81B51D4321B800E228BF /* UsefulUIUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEA81BD1D4321B800E228BF /* UsefulUIUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA81B31D4321B800E228BF /* UsefulUIUtils.framework */; };
 		AAEA81C21D4321B800E228BF /* UsefulUIUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA81C11D4321B800E228BF /* UsefulUIUtilsTests.m */; };
-		AAEA81CC1D4321E000E228BF /* UUILayoutAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEA81CA1D4321E000E228BF /* UUILayoutAttribute.h */; };
-		AAEA81CD1D4321E000E228BF /* UUILayoutAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA81CB1D4321E000E228BF /* UUILayoutAttribute.m */; };
-		AAEA81D01D43222300E228BF /* UUILayoutScaffold.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEA81CE1D43222300E228BF /* UUILayoutScaffold.h */; };
-		AAEA81D11D43222300E228BF /* UUILayoutScaffold.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA81CF1D43222300E228BF /* UUILayoutScaffold.m */; };
 		AAEA81D31D4324A200E228BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA81D21D4324A200E228BF /* UIKit.framework */; };
 		AAEA81D41D4324A800E228BF /* UsefulUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA032B9F1CCB2A54009AA88B /* UsefulUtils.framework */; };
 /* End PBXBuildFile section */
@@ -81,16 +89,24 @@
 		AA37478D1CC8BC0B005FB31E /* UUCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUCancellable.m; sourceTree = "<group>"; };
 		AA37478F1CC8BE02005FB31E /* UUSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUSignal.h; sourceTree = "<group>"; };
 		AA3747901CC8BE02005FB31E /* UUSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUSignal.m; sourceTree = "<group>"; };
+		AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+UUILayoutValue.h"; path = "Layout/NSNumber+UUILayoutValue.h"; sourceTree = "<group>"; };
+		AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+UUILayoutValue.m"; path = "Layout/NSNumber+UUILayoutValue.m"; sourceTree = "<group>"; };
+		AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutAnchor.h; path = Layout/UUILayoutAnchor.h; sourceTree = "<group>"; };
+		AAA2F6D41D487540007E5A49 /* UUILayoutAnchor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutAnchor.m; path = Layout/UUILayoutAnchor.m; sourceTree = "<group>"; };
+		AAA2F6D51D487540007E5A49 /* UUILayoutAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutAttribute.h; path = Layout/UUILayoutAttribute.h; sourceTree = "<group>"; };
+		AAA2F6D61D487540007E5A49 /* UUILayoutAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutAttribute.m; path = Layout/UUILayoutAttribute.m; sourceTree = "<group>"; };
+		AAA2F6D71D487540007E5A49 /* UUILayoutScaffold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutScaffold.h; path = Layout/UUILayoutScaffold.h; sourceTree = "<group>"; };
+		AAA2F6D81D487540007E5A49 /* UUILayoutScaffold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutScaffold.m; path = Layout/UUILayoutScaffold.m; sourceTree = "<group>"; };
+		AAA2F6D91D487540007E5A49 /* UUILayoutScalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutScalar.h; path = Layout/UUILayoutScalar.h; sourceTree = "<group>"; };
+		AAA2F6DA1D487540007E5A49 /* UUILayoutScalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutScalar.m; path = Layout/UUILayoutScalar.m; sourceTree = "<group>"; };
+		AAA2F6DB1D487540007E5A49 /* UUILayoutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutValue.h; path = Layout/UUILayoutValue.h; sourceTree = "<group>"; };
+		AAA2F6DC1D487540007E5A49 /* UUILayoutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutValue.m; path = Layout/UUILayoutValue.m; sourceTree = "<group>"; };
 		AAEA81B31D4321B800E228BF /* UsefulUIUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UsefulUIUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA81B51D4321B800E228BF /* UsefulUIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsefulUIUtils.h; sourceTree = "<group>"; };
 		AAEA81B71D4321B800E228BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAEA81BC1D4321B800E228BF /* UsefulUIUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsefulUIUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA81C11D4321B800E228BF /* UsefulUIUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsefulUIUtilsTests.m; sourceTree = "<group>"; };
 		AAEA81C31D4321B800E228BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAEA81CA1D4321E000E228BF /* UUILayoutAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUILayoutAttribute.h; sourceTree = "<group>"; };
-		AAEA81CB1D4321E000E228BF /* UUILayoutAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUILayoutAttribute.m; sourceTree = "<group>"; };
-		AAEA81CE1D43222300E228BF /* UUILayoutScaffold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUILayoutScaffold.h; sourceTree = "<group>"; };
-		AAEA81CF1D43222300E228BF /* UUILayoutScaffold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUILayoutScaffold.m; sourceTree = "<group>"; };
 		AAEA81D21D4324A200E228BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -189,15 +205,31 @@
 			path = UsefulUtils;
 			sourceTree = "<group>";
 		};
+		AAA2F6E91D487548007E5A49 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutValue.h */,
+				AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutValue.m */,
+				AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */,
+				AAA2F6D41D487540007E5A49 /* UUILayoutAnchor.m */,
+				AAA2F6D51D487540007E5A49 /* UUILayoutAttribute.h */,
+				AAA2F6D61D487540007E5A49 /* UUILayoutAttribute.m */,
+				AAA2F6D71D487540007E5A49 /* UUILayoutScaffold.h */,
+				AAA2F6D81D487540007E5A49 /* UUILayoutScaffold.m */,
+				AAA2F6D91D487540007E5A49 /* UUILayoutScalar.h */,
+				AAA2F6DA1D487540007E5A49 /* UUILayoutScalar.m */,
+				AAA2F6DB1D487540007E5A49 /* UUILayoutValue.h */,
+				AAA2F6DC1D487540007E5A49 /* UUILayoutValue.m */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		AAEA81B41D4321B800E228BF /* UsefulUIUtils */ = {
 			isa = PBXGroup;
 			children = (
 				AAEA81B51D4321B800E228BF /* UsefulUIUtils.h */,
 				AAEA81B71D4321B800E228BF /* Info.plist */,
-				AAEA81CA1D4321E000E228BF /* UUILayoutAttribute.h */,
-				AAEA81CB1D4321E000E228BF /* UUILayoutAttribute.m */,
-				AAEA81CE1D43222300E228BF /* UUILayoutScaffold.h */,
-				AAEA81CF1D43222300E228BF /* UUILayoutScaffold.m */,
+				AAA2F6E91D487548007E5A49 /* Layout */,
 			);
 			path = UsefulUIUtils;
 			sourceTree = "<group>";
@@ -235,9 +267,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA2F6DD1D487540007E5A49 /* NSNumber+UUILayoutValue.h in Headers */,
+				AAA2F6E31D487540007E5A49 /* UUILayoutScaffold.h in Headers */,
+				AAA2F6DF1D487540007E5A49 /* UUILayoutAnchor.h in Headers */,
 				AAEA81B61D4321B800E228BF /* UsefulUIUtils.h in Headers */,
-				AAEA81CC1D4321E000E228BF /* UUILayoutAttribute.h in Headers */,
-				AAEA81D01D43222300E228BF /* UUILayoutScaffold.h in Headers */,
+				AAA2F6E51D487540007E5A49 /* UUILayoutScalar.h in Headers */,
+				AAA2F6E11D487540007E5A49 /* UUILayoutAttribute.h in Headers */,
+				AAA2F6E71D487540007E5A49 /* UUILayoutValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,8 +455,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAEA81CD1D4321E000E228BF /* UUILayoutAttribute.m in Sources */,
-				AAEA81D11D43222300E228BF /* UUILayoutScaffold.m in Sources */,
+				AAA2F6E61D487540007E5A49 /* UUILayoutScalar.m in Sources */,
+				AAA2F6E21D487540007E5A49 /* UUILayoutAttribute.m in Sources */,
+				AAA2F6E41D487540007E5A49 /* UUILayoutScaffold.m in Sources */,
+				AAA2F6E01D487540007E5A49 /* UUILayoutAnchor.m in Sources */,
+				AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutValue.m in Sources */,
+				AAA2F6E81D487540007E5A49 /* UUILayoutValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +741,7 @@
 				AAEA81C61D4321B800E228BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAEA81C71D4321B800E228BF /* Build configuration list for PBXNativeTarget "UsefulUIUtilsTests" */ = {
 			isa = XCConfigurationList;
@@ -709,6 +750,7 @@
 				AAEA81C91D4321B800E228BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
