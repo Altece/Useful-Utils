@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 
 #import <UsefulUIUtils/NSNumber+UUILayoutPrototype.h>
+#import <UsefulUIUtils/UILayoutGuide+UILayoutScaffoldOwner.h>
 #import <UsefulUIUtils/UIView+UUILayoutScaffoldOwner.h>
 #import <UsefulUIUtils/UUILayoutAnchor.h>
 #import <UsefulUIUtils/UUILayoutAttribute.h>

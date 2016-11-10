@@ -30,6 +30,8 @@
 		AA33C7341CD1F33A00081F67 /* UULazyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33C7321CD1F33A00081F67 /* UULazyValue.m */; };
 		AA58D44B1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = AA58D4491DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h */; };
 		AA58D44C1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = AA58D44A1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m */; };
+		AA58D4501DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = AA58D44E1DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.h */; };
+		AA58D4511DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = AA58D44F1DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.m */; };
 		AAA2F6DD1D487540007E5A49 /* NSNumber+UUILayoutPrototype.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutPrototype.h */; };
 		AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutPrototype.m */; };
 		AAA2F6DF1D487540007E5A49 /* UUILayoutAnchor.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */; };
@@ -95,6 +97,8 @@
 		AA58D4491DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+UUILayoutScaffoldOwner.h"; path = "Layout/UIView+UUILayoutScaffoldOwner.h"; sourceTree = "<group>"; };
 		AA58D44A1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+UUILayoutScaffoldOwner.m"; path = "Layout/UIView+UUILayoutScaffoldOwner.m"; sourceTree = "<group>"; };
 		AA58D44D1DD41A7D006EB397 /* UUMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUMacros.h; sourceTree = "<group>"; };
+		AA58D44E1DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILayoutGuide+UILayoutScaffoldOwner.h"; path = "Layout/UILayoutGuide+UILayoutScaffoldOwner.h"; sourceTree = "<group>"; };
+		AA58D44F1DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILayoutGuide+UILayoutScaffoldOwner.m"; path = "Layout/UILayoutGuide+UILayoutScaffoldOwner.m"; sourceTree = "<group>"; };
 		AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+UUILayoutPrototype.h"; path = "Layout/NSNumber+UUILayoutPrototype.h"; sourceTree = "<group>"; };
 		AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+UUILayoutPrototype.m"; path = "Layout/NSNumber+UUILayoutPrototype.m"; sourceTree = "<group>"; };
 		AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutAnchor.h; path = Layout/UUILayoutAnchor.h; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 			children = (
 				AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutPrototype.h */,
 				AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutPrototype.m */,
+				AA58D44E1DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.h */,
+				AA58D44F1DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.m */,
 				AA58D4491DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h */,
 				AA58D44A1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m */,
 				AA58D4481DD41636006EB397 /* UUILayout.h */,
@@ -284,6 +290,7 @@
 				AAA2F6E51D487540007E5A49 /* UUILayoutScalar.h in Headers */,
 				AAA2F6E11D487540007E5A49 /* UUILayoutAttribute.h in Headers */,
 				AAA2F6E71D487540007E5A49 /* UUILayoutPrototype.h in Headers */,
+				AA58D4501DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.h in Headers */,
 				AA58D44B1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +479,7 @@
 				AAA2F6E01D487540007E5A49 /* UUILayoutAnchor.m in Sources */,
 				AA58D44C1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m in Sources */,
 				AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutPrototype.m in Sources */,
+				AA58D4511DD432D0006EB397 /* UILayoutGuide+UILayoutScaffoldOwner.m in Sources */,
 				AAA2F6E81D487540007E5A49 /* UUILayoutPrototype.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
