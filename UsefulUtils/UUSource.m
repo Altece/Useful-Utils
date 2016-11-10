@@ -70,14 +70,16 @@
 
 - (UUSubscription *)subscribe:(void (^)(id))block on:(id<UUDispatcher>)dispatcher {
     NSAssert(block != nil, @"Subscribing with a nil block is not allowed.");
-    return [self subscribeSubscriber:
-            [[UUValueTask alloc] initWithBlock:block on:dispatcher]];
+    return [self subscribeSubscriber:({
+        [[UUValueTask alloc] initWithBlock:block on:dispatcher];
+    })];
 }
 
 - (UUSubscription *)subscribeNext:(void (^)(id))block on:(id<UUDispatcher>)dispatcher {
     NSAssert(block != nil, @"Subscribing next with a nil block is not allowed.");
-    return [self subscribeNextSubscriber:
-            [[UUValueTask alloc] initWithBlock:block on:dispatcher]];
+    return [self subscribeNextSubscriber:({
+        [[UUValueTask alloc] initWithBlock:block on:dispatcher];
+    })];
 }
 
 #pragma mark Internal Subscribing

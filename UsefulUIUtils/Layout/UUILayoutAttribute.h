@@ -1,10 +1,12 @@
 #import <UIKit/UIKit.h>
 
+#import "UUILayoutPrototype.h"
+
+@protocol UUILayoutPrototype;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol UUILayoutValue;
-
-@interface UUILayoutAttribute : NSObject
+@interface UUILayoutAttribute : NSObject <UUILayoutPrototype>
 
 @property (nonatomic, readonly, weak) id item;
 
@@ -15,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithItem:(id)item
                    attribute:(NSLayoutAttribute)attribute NS_DESIGNATED_INITIALIZER;
 
-- (NSLayoutConstraint *)constrainTo:(id<UUILayoutValue>)value;
+- (NSLayoutConstraint *)constrainTo:(id<UUILayoutPrototype>)value;
 
-- (NSLayoutConstraint *)constrainToMaximum:(id<UUILayoutValue>)value;
+- (NSLayoutConstraint *)constrainToMaximum:(id<UUILayoutPrototype>)value;
 
-- (NSLayoutConstraint *)constrainToMinimum:(id<UUILayoutValue>)value;
+- (NSLayoutConstraint *)constrainToMinimum:(id<UUILayoutPrototype>)value;
 
 @end
 

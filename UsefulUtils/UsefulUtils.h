@@ -14,8 +14,6 @@ FOUNDATION_EXPORT double UsefulUtilsVersionNumber;
 //! Project version string for UsefulUtils.
 FOUNDATION_EXPORT const unsigned char UsefulUtilsVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <UsefulUtils/PublicHeader.h>
-
 #import <UsefulUtils/UUCancellable.h>
 #import <UsefulUtils/UUDispatch.h>
 #import <UsefulUtils/UUMap.h>

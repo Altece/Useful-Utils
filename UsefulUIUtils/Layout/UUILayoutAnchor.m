@@ -2,8 +2,8 @@
 
 @implementation UUILayoutAnchor
 
-- (id<UUILayoutValue>)plus:(CGFloat)constant {
-    return [[UUILayoutValue alloc] initWithAttribute:self multiplier:1.0 constant:constant];
+- (id<UUILayoutPrototype>)plus:(CGFloat)constant {
+    return [[UUILayoutPrototype alloc] initWithAttribute:self multiplier:1.0 constant:constant];
 }
 
 @end

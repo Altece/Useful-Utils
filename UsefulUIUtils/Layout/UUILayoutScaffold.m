@@ -2,7 +2,7 @@
 
 #import "UUILayoutAttribute.h"
 
-static const NSInteger kMajorSystemVersion;
+static NSInteger kMajorSystemVersion;
 
 @implementation UUILayoutScaffold
 
@@ -24,7 +24,8 @@ static const NSInteger kMajorSystemVersion;
     _trailing = [[UUILayoutAnchor alloc] initWithItem:item attribute:NSLayoutAttributeTrailing];
     _left = [[UUILayoutAnchor alloc] initWithItem:item attribute:NSLayoutAttributeLeft];
     _right = [[UUILayoutAnchor alloc] initWithItem:item attribute:NSLayoutAttributeRight];
-    _baseline = [[UUILayoutAnchor alloc] initWithItem:item attribute:NSLayoutAttributeBaseline];
+    _firstBaseline = [[UUILayoutAnchor alloc] initWithItem:item attribute:NSLayoutAttributeFirstBaseline];
+    _lastBaseline = [[UUILayoutAnchor alloc] initWithItem:item attribute:NSLayoutAttributeLastBaseline];
     return self;
 }
 

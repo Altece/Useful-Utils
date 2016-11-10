@@ -4,9 +4,9 @@
 #import "UUILayoutAttribute.h"
 #import "UUILayoutScalar.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @class UUILayoutAttribute;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UUILayoutScaffold : NSObject
 
@@ -26,7 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly, strong) UUILayoutAnchor *right;
 
-@property (nonatomic, readonly, strong) UUILayoutAnchor *baseline;
+@property (nonatomic, readonly, strong) UUILayoutAnchor *firstBaseline;
+
+@property (nonatomic, readonly, strong) UUILayoutAnchor *lastBaseline;
 
 - (instancetype)init NS_UNAVAILABLE;
 

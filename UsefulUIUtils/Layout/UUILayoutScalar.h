@@ -1,13 +1,17 @@
 #import <UIKit/UIKit.h>
 
-#import "UUILayoutValue.h"
+#import "UUILayoutAttribute.h"
 
-@interface UUILayourtScalar : UUILayoutAttribute
+NS_ASSUME_NONNULL_BEGIN
 
-- (id<UUILayoutValue>)plus:(CGFloat)constant;
+@interface UUILayoutScalar : UUILayoutAttribute
 
-- (id<UUILayoutValue>)times:(CGFloat *)multiplier;
+- (id<UUILayoutPrototype>)plus:(CGFloat)constant;
 
-- (id<UUILayoutValue>)times:(CGFloat *)multiplier plus:(CGFloat)constant;
+- (id<UUILayoutPrototype>)times:(CGFloat)multiplier;
+
+- (id<UUILayoutPrototype>)times:(CGFloat)multiplier plus:(CGFloat)constant;
 
 @end
+
+NS_ASSUME_NONNULL_END
