@@ -32,7 +32,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithItem:(id)item;
+- (instancetype)initWithItem:(id)item NS_DESIGNATED_INITIALIZER;
+
+@end
+
+@protocol UUILayoutScaffoldOwner <NSObject>
+
+@property (nonatomic, readonly, strong) UUILayoutScaffold *uui_scaffold;
 
 @end
 

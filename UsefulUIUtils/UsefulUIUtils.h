@@ -14,6 +14,4 @@ FOUNDATION_EXPORT double UsefulUIUtilsVersionNumber;
 //! Project version string for UsefulUIUtils.
 FOUNDATION_EXPORT const unsigned char UsefulUIUtilsVersionString[];
 
-#import <UsefulUIUtils/UUILayoutAttribute.h>
-#import <UsefulUIUtils/UUILayoutScaffold.h>
-
+#import <UsefulUIUtils/UUILayout.h>

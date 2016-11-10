@@ -28,8 +28,10 @@
 		AA032BC91CCB2DAE009AA88B /* UUMap.m in Sources */ = {isa = PBXBuildFile; fileRef = AA032BC71CCB2DAE009AA88B /* UUMap.m */; };
 		AA33C7331CD1F33A00081F67 /* UULazyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = AA33C7311CD1F33A00081F67 /* UULazyValue.h */; };
 		AA33C7341CD1F33A00081F67 /* UULazyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33C7321CD1F33A00081F67 /* UULazyValue.m */; };
-		AAA2F6DD1D487540007E5A49 /* NSNumber+UUILayoutValue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutValue.h */; };
-		AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutValue.m */; };
+		AA58D44B1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = AA58D4491DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h */; };
+		AA58D44C1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = AA58D44A1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m */; };
+		AAA2F6DD1D487540007E5A49 /* NSNumber+UUILayoutPrototype.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutPrototype.h */; };
+		AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutPrototype.m */; };
 		AAA2F6DF1D487540007E5A49 /* UUILayoutAnchor.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */; };
 		AAA2F6E01D487540007E5A49 /* UUILayoutAnchor.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D41D487540007E5A49 /* UUILayoutAnchor.m */; };
 		AAA2F6E11D487540007E5A49 /* UUILayoutAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D51D487540007E5A49 /* UUILayoutAttribute.h */; };
@@ -38,8 +40,8 @@
 		AAA2F6E41D487540007E5A49 /* UUILayoutScaffold.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6D81D487540007E5A49 /* UUILayoutScaffold.m */; };
 		AAA2F6E51D487540007E5A49 /* UUILayoutScalar.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6D91D487540007E5A49 /* UUILayoutScalar.h */; };
 		AAA2F6E61D487540007E5A49 /* UUILayoutScalar.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6DA1D487540007E5A49 /* UUILayoutScalar.m */; };
-		AAA2F6E71D487540007E5A49 /* UUILayoutValue.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6DB1D487540007E5A49 /* UUILayoutValue.h */; };
-		AAA2F6E81D487540007E5A49 /* UUILayoutValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6DC1D487540007E5A49 /* UUILayoutValue.m */; };
+		AAA2F6E71D487540007E5A49 /* UUILayoutPrototype.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2F6DB1D487540007E5A49 /* UUILayoutPrototype.h */; };
+		AAA2F6E81D487540007E5A49 /* UUILayoutPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2F6DC1D487540007E5A49 /* UUILayoutPrototype.m */; };
 		AAEA81B61D4321B800E228BF /* UsefulUIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEA81B51D4321B800E228BF /* UsefulUIUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEA81BD1D4321B800E228BF /* UsefulUIUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA81B31D4321B800E228BF /* UsefulUIUtils.framework */; };
 		AAEA81C21D4321B800E228BF /* UsefulUIUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA81C11D4321B800E228BF /* UsefulUIUtilsTests.m */; };
@@ -89,8 +91,11 @@
 		AA37478D1CC8BC0B005FB31E /* UUCancellable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUCancellable.m; sourceTree = "<group>"; };
 		AA37478F1CC8BE02005FB31E /* UUSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUSignal.h; sourceTree = "<group>"; };
 		AA3747901CC8BE02005FB31E /* UUSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUSignal.m; sourceTree = "<group>"; };
-		AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+UUILayoutValue.h"; path = "Layout/NSNumber+UUILayoutValue.h"; sourceTree = "<group>"; };
-		AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+UUILayoutValue.m"; path = "Layout/NSNumber+UUILayoutValue.m"; sourceTree = "<group>"; };
+		AA58D4481DD41636006EB397 /* UUILayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UUILayout.h; path = Layout/UUILayout.h; sourceTree = "<group>"; };
+		AA58D4491DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+UUILayoutScaffoldOwner.h"; path = "Layout/UIView+UUILayoutScaffoldOwner.h"; sourceTree = "<group>"; };
+		AA58D44A1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+UUILayoutScaffoldOwner.m"; path = "Layout/UIView+UUILayoutScaffoldOwner.m"; sourceTree = "<group>"; };
+		AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+UUILayoutPrototype.h"; path = "Layout/NSNumber+UUILayoutPrototype.h"; sourceTree = "<group>"; };
+		AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+UUILayoutPrototype.m"; path = "Layout/NSNumber+UUILayoutPrototype.m"; sourceTree = "<group>"; };
 		AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutAnchor.h; path = Layout/UUILayoutAnchor.h; sourceTree = "<group>"; };
 		AAA2F6D41D487540007E5A49 /* UUILayoutAnchor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutAnchor.m; path = Layout/UUILayoutAnchor.m; sourceTree = "<group>"; };
 		AAA2F6D51D487540007E5A49 /* UUILayoutAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutAttribute.h; path = Layout/UUILayoutAttribute.h; sourceTree = "<group>"; };
@@ -99,8 +104,8 @@
 		AAA2F6D81D487540007E5A49 /* UUILayoutScaffold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutScaffold.m; path = Layout/UUILayoutScaffold.m; sourceTree = "<group>"; };
 		AAA2F6D91D487540007E5A49 /* UUILayoutScalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutScalar.h; path = Layout/UUILayoutScalar.h; sourceTree = "<group>"; };
 		AAA2F6DA1D487540007E5A49 /* UUILayoutScalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutScalar.m; path = Layout/UUILayoutScalar.m; sourceTree = "<group>"; };
-		AAA2F6DB1D487540007E5A49 /* UUILayoutValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutValue.h; path = Layout/UUILayoutValue.h; sourceTree = "<group>"; };
-		AAA2F6DC1D487540007E5A49 /* UUILayoutValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutValue.m; path = Layout/UUILayoutValue.m; sourceTree = "<group>"; };
+		AAA2F6DB1D487540007E5A49 /* UUILayoutPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutPrototype.h; path = Layout/UUILayoutPrototype.h; sourceTree = "<group>"; };
+		AAA2F6DC1D487540007E5A49 /* UUILayoutPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUILayoutPrototype.m; path = Layout/UUILayoutPrototype.m; sourceTree = "<group>"; };
 		AAEA81B31D4321B800E228BF /* UsefulUIUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UsefulUIUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA81B51D4321B800E228BF /* UsefulUIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsefulUIUtils.h; sourceTree = "<group>"; };
 		AAEA81B71D4321B800E228BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,8 +213,11 @@
 		AAA2F6E91D487548007E5A49 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutValue.h */,
-				AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutValue.m */,
+				AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutPrototype.h */,
+				AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutPrototype.m */,
+				AA58D4491DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h */,
+				AA58D44A1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m */,
+				AA58D4481DD41636006EB397 /* UUILayout.h */,
 				AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */,
 				AAA2F6D41D487540007E5A49 /* UUILayoutAnchor.m */,
 				AAA2F6D51D487540007E5A49 /* UUILayoutAttribute.h */,
@@ -218,8 +226,8 @@
 				AAA2F6D81D487540007E5A49 /* UUILayoutScaffold.m */,
 				AAA2F6D91D487540007E5A49 /* UUILayoutScalar.h */,
 				AAA2F6DA1D487540007E5A49 /* UUILayoutScalar.m */,
-				AAA2F6DB1D487540007E5A49 /* UUILayoutValue.h */,
-				AAA2F6DC1D487540007E5A49 /* UUILayoutValue.m */,
+				AAA2F6DB1D487540007E5A49 /* UUILayoutPrototype.h */,
+				AAA2F6DC1D487540007E5A49 /* UUILayoutPrototype.m */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -267,13 +275,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAA2F6DD1D487540007E5A49 /* NSNumber+UUILayoutValue.h in Headers */,
+				AAA2F6DD1D487540007E5A49 /* NSNumber+UUILayoutPrototype.h in Headers */,
 				AAA2F6E31D487540007E5A49 /* UUILayoutScaffold.h in Headers */,
 				AAA2F6DF1D487540007E5A49 /* UUILayoutAnchor.h in Headers */,
 				AAEA81B61D4321B800E228BF /* UsefulUIUtils.h in Headers */,
 				AAA2F6E51D487540007E5A49 /* UUILayoutScalar.h in Headers */,
 				AAA2F6E11D487540007E5A49 /* UUILayoutAttribute.h in Headers */,
-				AAA2F6E71D487540007E5A49 /* UUILayoutValue.h in Headers */,
+				AAA2F6E71D487540007E5A49 /* UUILayoutPrototype.h in Headers */,
+				AA58D44B1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,8 +468,9 @@
 				AAA2F6E21D487540007E5A49 /* UUILayoutAttribute.m in Sources */,
 				AAA2F6E41D487540007E5A49 /* UUILayoutScaffold.m in Sources */,
 				AAA2F6E01D487540007E5A49 /* UUILayoutAnchor.m in Sources */,
-				AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutValue.m in Sources */,
-				AAA2F6E81D487540007E5A49 /* UUILayoutValue.m in Sources */,
+				AA58D44C1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m in Sources */,
+				AAA2F6DE1D487540007E5A49 /* NSNumber+UUILayoutPrototype.m in Sources */,
+				AAA2F6E81D487540007E5A49 /* UUILayoutPrototype.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
