@@ -94,6 +94,7 @@
 		AA58D4481DD41636006EB397 /* UUILayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UUILayout.h; path = Layout/UUILayout.h; sourceTree = "<group>"; };
 		AA58D4491DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+UUILayoutScaffoldOwner.h"; path = "Layout/UIView+UUILayoutScaffoldOwner.h"; sourceTree = "<group>"; };
 		AA58D44A1DD41778006EB397 /* UIView+UUILayoutScaffoldOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+UUILayoutScaffoldOwner.m"; path = "Layout/UIView+UUILayoutScaffoldOwner.m"; sourceTree = "<group>"; };
+		AA58D44D1DD41A7D006EB397 /* UUMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUMacros.h; sourceTree = "<group>"; };
 		AAA2F6D11D487540007E5A49 /* NSNumber+UUILayoutPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+UUILayoutPrototype.h"; path = "Layout/NSNumber+UUILayoutPrototype.h"; sourceTree = "<group>"; };
 		AAA2F6D21D487540007E5A49 /* NSNumber+UUILayoutPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+UUILayoutPrototype.m"; path = "Layout/NSNumber+UUILayoutPrototype.m"; sourceTree = "<group>"; };
 		AAA2F6D31D487540007E5A49 /* UUILayoutAnchor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUILayoutAnchor.h; path = Layout/UUILayoutAnchor.h; sourceTree = "<group>"; };
@@ -196,6 +197,7 @@
 				AA33C7321CD1F33A00081F67 /* UULazyValue.m */,
 				AA032BC61CCB2DAE009AA88B /* UUMap.h */,
 				AA032BC71CCB2DAE009AA88B /* UUMap.m */,
+				AA58D44D1DD41A7D006EB397 /* UUMacros.h */,
 				AA032B941CCB16D9009AA88B /* UUMaybe.h */,
 				AA032B951CCB16D9009AA88B /* UUMaybe.m */,
 				AA37478F1CC8BE02005FB31E /* UUSignal.h */,

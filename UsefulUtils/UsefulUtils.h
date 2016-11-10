@@ -17,6 +17,7 @@ FOUNDATION_EXPORT const unsigned char UsefulUtilsVersionString[];
 #import <UsefulUtils/UUCancellable.h>
 #import <UsefulUtils/UUDispatch.h>
 #import <UsefulUtils/UUMap.h>
+#import <UsefulUtils/UUMacros.h>
 #import <UsefulUtils/UUMaybe.h>
 #import <UsefulUtils/UUSignal.h>
 #import <UsefulUtils/UUSource.h>
