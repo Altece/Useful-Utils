@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 
 #import "UUMap.h"
+#import "UUMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,18 +24,18 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Initialize a new source without an initial value.
 ///
-- (instancetype)init;
+- (instancetype)init $convenience;
 
 ///
 /// Initialize a new source with the given initial value.
 ///
-- (instancetype)initWithValue:(T)value NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithValue:(T)value $designated;
 
 ///
 /// Initialize a source that will derive its value from the given block
 /// whenever the given signal forwards a signal notification.
 ///
-- (id)initWithSignal:(UUSignal *)signal transformationBlock:(id (^)())block;
+- (id)initWithSignal:(UUSignal *)signal transformationBlock:(id (^)())block $convenience;
 
 #pragma mark Pushing and Revoking Values from Sources
 
@@ -65,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @discussion This is a convenience method for -subscribe:on: which
 ///             uses the shared instance of @c UUDispatchImmediately.
 ///
-- (UUSubscription *)subscribe:(void (^)(T value))block;
+- (UUSubscription *)subscribe:(void (^)(T value))block $convenience;
 
 ///
 /// Call on the given block whenever a value is pushed to the source,
@@ -77,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @discussion This is a convenience method for -subscribeNext:on: which
 ///             uses the shared instance of @c UUDispatchImmediately.
 ///
-- (UUSubscription *)subscribeNext:(void (^)(T value))block;
+- (UUSubscription *)subscribeNext:(void (^)(T value))block $convenience;
 
 ///
 /// If the source has a current value, call on the given block with it immediately,

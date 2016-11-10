@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#import "UUMacros.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 ///
@@ -16,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///              This block is not guaranteed to be called, but would not
 ///              be called more than once.
 ///
-- (instancetype)initWithCancellationBlock:(void (^)())block NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithCancellationBlock:(void (^)())block $designated;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init $unavailable;
 
 ///
 /// End the operation associated with this cancellable.

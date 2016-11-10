@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#import "UUMacros.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 ///
@@ -18,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///                          The block is guaranteed to be called only once.
 ///
 - (instancetype)initWithOriginator:(nullable id)originator
-                 cancellationBlock:(void (^)())cancellationBlock NS_DESIGNATED_INITIALIZER;
+                 cancellationBlock:(void (^)())cancellationBlock $designated;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init $unavailable;
 
 ///
 /// End the subscription early.

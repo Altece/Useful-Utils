@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#define $convenience
+
 #define $deprecated __deprecated
 
 #define $designated NS_DESIGNATED_INITIALIZER

@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#import "UUMacros.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 ///
@@ -25,9 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Initialize a lazy value with the given block that can be called on
 /// to provide the desired value.
 ///
-- (instancetype)initWithBlock:(T (^)())block NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithBlock:(T (^)())block $designated;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init $unavailable;
 
 @end
 

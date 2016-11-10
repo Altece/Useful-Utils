@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#import "UUMacros.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class UUCancellable;
@@ -57,9 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Initialize a new dispatch sync object with the given dispatch queue.
 ///
-- (instancetype)initWithQueue:(dispatch_queue_t)queue NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithQueue:(dispatch_queue_t)queue $designated;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init $unavailable;
 
 ///
 /// Create a dispatch sync object for the main queue.
@@ -79,9 +81,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Initialize a new dispatch async object with the given dispatch queue.
 ///
-- (instancetype)initWithQueue:(dispatch_queue_t)queue NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithQueue:(dispatch_queue_t)queue $designated;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init $unavailable;
 
 ///
 /// A dispatch async object for the main queue.
@@ -110,9 +112,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// before execution should begin.
 ///
 - (instancetype)initWithQueue:(dispatch_queue_t)queue
-                    timeDelay:(NSTimeInterval)delay NS_DESIGNATED_INITIALIZER;
+                    timeDelay:(NSTimeInterval)delay $designated;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init $unavailable;
 
 ///
 /// Create a dispatch after object for the main queue.
@@ -122,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// A dispatch after object for an unnamed concurrent queue.
 ///
-+ (instancetype)sharedDispatcher;;
++ (instancetype)sharedDispatcher;
 
 @end
 

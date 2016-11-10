@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#import "UUMacros.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class UUSource<T>;
@@ -14,13 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Initialise a new signal object.
 ///
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
+- (instancetype)init $designated;
 
 ///
 /// Initialize a new signal object that will notify subscribers
 /// whenever a new value is pushed to the given source.
 ///
-- (instancetype)initWithSource:(UUSource *)source;
+- (instancetype)initWithSource:(UUSource *)source $convenience;
 
 ///
 /// Call on all subscribed blocks to notify them that the event has occurred.

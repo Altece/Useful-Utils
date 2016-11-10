@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#import "UUMacros.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 ///
@@ -23,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 + (instancetype)some:(T)value;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init $unavailable;
 
 ///
 /// Get access to the value stored in the maybe.
